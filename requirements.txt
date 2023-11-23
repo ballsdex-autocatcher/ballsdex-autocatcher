@@ -1,5 +1,4 @@
 Pillow
 imagehash
-os
 requests
 flask
