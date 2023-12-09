@@ -1,5 +1,9 @@
 <h1 align="center" >🎉 Ballsdex AutoCatcher</h1>
 <div align="center">
+  <img src="https://curefras.sirv.com/9263564.jpg" height="350">
+</div>
+<br><br>
+<div align="center">
   <a herf="https://www.javascript.com"><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"></a>
   <a herf="https://nodejs.org"><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a>
   <a herf="https://www.npmjs.com"><img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white"></a>
@@ -12,6 +16,7 @@
   <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/issues/mohammad87115/ballsdex-autocatcher.svg?style=for-the-badge"></a>
   <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/license/mohammad87115/ballsdex-autocatcher.svg?style=for-the-badge"></a>
 </div>
+<br>
 
 The first Ballsdex AutoCatcher selfbot that went public in github 😁. written in **[JavaScript](https://www.javascript.com)** with 💖 by me, powered by **[discord.js-selfbot-v13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** module written by **[akio-chan-ai](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** for simplifying the prograss of making a discord selfbot.
 
