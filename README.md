@@ -67,4 +67,6 @@ Dont forget to star ⭐
 
 <h1 align="center">📸 Shots</h1>
 
+<h1 align="center">🏃🏻‍♀️ Hosting needs</h1>
 
+Read [this page](https://github.com/mohammad87115/ballsdex-autocatcher/blob/main/docs/hosting.md) for more information 
