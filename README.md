@@ -1,6 +1,6 @@
 <h1 align="center" >🎉 Ballsdex AutoCatcher</h1>
 <div align="center">
-  <img src="https://curefras.sirv.com/9263564.jpg" height="350">
+  <img src="https://curefras.sirv.com/9263564.jpg" height="50%">
 </div>
 <br><br>
 <div align="center">
@@ -79,3 +79,8 @@ Dont forget to star ⭐
 <h1 align="center">🏃🏻‍♀️ Hosting needs</h1>
 
 Read [this page](https://github.com/mohammad87115/ballsdex-autocatcher/blob/main/docs/hosting.md) for more information 
+
+<h1>🕔 Anything else</h1>
+
+Big thanks to [M. logique](https://github.com/M-logique) for giving me ideas
+Dont forget to star ⭐ (for 69x time)
