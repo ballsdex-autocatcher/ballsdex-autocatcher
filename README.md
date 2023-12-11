@@ -1,6 +1,6 @@
 <h1 align="center" >🎉 Ballsdex AutoCatcher</h1>
 <div align="center">
-  <img src="https://curefras.sirv.com/9263564.jpg" height="50%">
+  <img src="https://curefras.sirv.com/9263564.jpg">
 </div>
 <br><br>
 <div align="center">
