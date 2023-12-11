@@ -11,10 +11,10 @@
   <a herf="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 </div>
 <div align="center">
-  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/stars/mohammad87115/ballsdex-autocatcher.svg?style=for-the-badge"></a>
-  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/forks/mohammad87115/ballsdex-autocatcher.svg?style=for-the-badge"></a>
-  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/issues/mohammad87115/ballsdex-autocatcher.svg?style=for-the-badge"></a>
-  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/license/mohammad87115/ballsdex-autocatcher.svg?style=for-the-badge"></a>
+  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/stars/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
+  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/forks/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
+  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/issues/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
+  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/license/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
 </div>
 <br>
 
