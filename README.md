@@ -80,7 +80,7 @@ Dont forget to star ⭐
 
 Read [this page](https://github.com/mohammad87115/ballsdex-autocatcher/blob/main/docs/hosting.md) for more information 
 
-<h2 align="center">🤔 Hmm idk what to name this</h2>
+<h1 align="center">🤔 Hmm idk what to name this</h1>
 
 Big thanks to [M. logique](https://github.com/M-logique) for giving me ideas<br>
 Dont forget to star ⭐ (for 69x time)
