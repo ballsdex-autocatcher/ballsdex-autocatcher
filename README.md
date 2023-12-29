@@ -20,6 +20,9 @@
 
 The first Ballsdex AutoCatcher selfbot that went public in github 😁. written in **[JavaScript](https://www.javascript.com)** with 💖 by me, powered by **[discord.js-selfbot-v13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** module written by **[akio-chan-ai](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** for simplifying the prograss of making a discord selfbot.
 
+<h2 align="center">😲 Proof that it works</h3>
+Video: https://mega.nz/embed/Au0BzIzS#Vx7KcaWJGqt1yLylOV8lmUFHMr2oU0Jk5WOVXGF3R1s
+
 <h2 align="center" >⚠ Terms of using this code</h2>
 
 **This repository/project is under MIT licence, if you are using it please leave a watermark to me.** [github.com/mohammad87115](https://github.com/mohammad87115)
