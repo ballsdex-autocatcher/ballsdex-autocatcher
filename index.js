@@ -39,6 +39,28 @@ async function log(text) {
     
 }
 
+async function ncatch(text) {
+    let date_ob = new Date();
+    let date = ("0" + date_ob.getDate()).slice(-2);
+    let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+    let year = date_ob.getFullYear();
+    let hours = date_ob.getHours();
+    let minutes = date_ob.getMinutes();
+    let seconds = date_ob.getSeconds();
+    console.log(chalk.cyanBright("[Log] ") + chalk.blueBright(`[${year}/${month}/${date} - ${hours}:${minutes}:${seconds}] `) + chalk.blackBright(">> [ ") + chalk.hex("#c7c7c7")(text) + chalk.blackBright(" ]"))
+    const embed = new Discord.MessageEmbed()
+        .setTitle("Catched a new ball")
+        .setDescription(text)
+        .setTimestamp()
+        .setThumbnail(lastball)
+        .setColor("#00ad68")
+    try {
+        webhook.send({content:" ", embeds: [embed]})
+    } catch {
+        return;
+    }
+}
+
 async function error(text) {
     let date_ob = new Date();
     let date = ("0" + date_ob.getDate()).slice(-2);
@@ -106,7 +128,7 @@ client.on("messageUpdate", async (old, message) => {
     if (message.content.includes(`<@${client.user.id}>`)) {
         const firstline = message.content.split("(`")[0]
         const name = firstline.split("You caught ")[1]
-        log(`Caught ${name.replace("!","")} at <#${message.channel.id}> (${message.guild?.name})`)
+        ncatch(`Caught ${name.replace("!","")} at <#${message.channel.id}> (${message.guild?.name})`)
     }
 })
 
