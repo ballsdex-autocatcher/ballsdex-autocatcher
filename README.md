@@ -44,6 +44,7 @@ So, I think now we have all the requirements installed and ready. Lets start our
 
 <h1 align="center">⚙ Config files</h1>
 
+First rename `config.json.example` to `config.json`<br>
 Open config.json and fill out the values.<br>
 
 ```json
