@@ -98,7 +98,7 @@ client.on("messageCreate", async (message) => {
         lastball = img;
         await message.clickButton();
     }
-    if (message.content.includes(`${client.user.id}`) && message.content.includes(`caught`)) {
+    if (message.content.includes(`${client.user.id}`)) {
         const firstline = message.content.split("(`")[0]
         const name = firstline.split("You caught ")[1]
 
@@ -124,9 +124,9 @@ client.on('interactionModalCreate', async modal => {
                     // Load the current image file
                     const filename = './last-ball-image.png';
                     const binarydata = fs.readFileSync(filename); 
-                    const converted = new Buffer(binarydata).toString("base64");
+                    const converted = new Buffer.from(binarydata).toString("base64");
                     const binarydata2 = fs.readFileSync(file); 
-                    const converted2 = new Buffer(binarydata2).toString("base64");
+                    const converted2 = new Buffer.from(binarydata2).toString("base64");
             
                     if (converted === converted2) {
                         await modal.components[0].components[0].setValue(file.replace(".png", "").replace("./balls/", ""));
