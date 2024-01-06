@@ -93,7 +93,7 @@ client.once("ready", async (c) => {
 
 client.on("messageCreate", async (message) => {
     if (message.author.id !== "999736048596816014") return; // its not from ballsdex
-    if (Array.from(message.attachments)[0][1].url || message.content.includes("countryball")) {
+    if (message.content.includes("countryball") && Array.from(message.attachments)[0][1].url) {
         const img = Array.from(message.attachments)[0][1].url;
         lastball = img;
         await message.clickButton();

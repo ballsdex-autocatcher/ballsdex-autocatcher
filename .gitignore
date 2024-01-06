@@ -132,3 +132,7 @@ dist
 # project config files
 
 config.json
+
+# balls image
+
+last-ball-image.png
