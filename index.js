@@ -93,16 +93,20 @@ client.once("ready", async (c) => {
 
 client.on("messageCreate", async (message) => {
     if (message.author.id !== "999736048596816014") return; // its not from ballsdex
+
     if (message.content.includes("countryball") && Array.from(message.attachments)[0][1].url) {
         const img = Array.from(message.attachments)[0][1].url;
         lastball = img;
         await message.clickButton();
     }
-    if (message.content.includes(`${client.user.id}`)) {
+})
+
+client.on("messageUpdate", async (old, message) => {
+    if (message.author.id !== "999736048596816014") return; // its not from ballsdex
+    if (message.content.includes(`<@${client.user.id}>`)) {
         const firstline = message.content.split("(`")[0]
         const name = firstline.split("You caught ")[1]
-
-        log(`Caught ${name.replace("!","")}at <#${message.channel.id}> (${message.guild?.name})`)
+        log(`Caught ${name.replace("!","")} at <#${message.channel.id}> (${message.guild?.name})`)
     }
 })
 
