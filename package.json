@@ -1,31 +1,30 @@
 {
-  "name": "ballsdex-catcher",
-  "version": "1.0.0",
-  "description": "identify ballsdex balls",
-  "main": "index.js",
-  "scripts": {
-    "test": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "github.com/mohammad87115/ballsdex-catcher"
-  },
-  "keywords": [
-    "ballsdex",
-    "country",
-    "balls",
-    "countryballs",
-    "empireballs",
-    "game",
-    "minigame",
-    "discord"
-  ],
-  "author": "SextyNine OR m87115",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js-selfbot-v13": "^2.14.12",
-    "http": "^0.0.1-security",
-    "looks-same": "^9.0.0",
-    "sharp": "^0.32.6"
+    "name": "ballsdex-catcher",
+    "version": "1.0.0",
+    "description": "identify ballsdex balls",
+    "main": "index.js",
+    "scripts": {
+      "test": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ballsdex-autocatcher/ballsdex-autocatcher"
+    },
+    "keywords": [
+      "ballsdex",
+      "country",
+      "balls",
+      "countryballs",
+      "empireballs",
+      "game",
+      "minigame",
+      "discord"
+    ],
+    "author": "SextyNine OR m87115",
+    "license": "ISC",
+    "dependencies": {
+      "chalk": "^4.1.2",
+      "discord.js-selfbot-v13": "^2.15.0"
+    }
   }
-}
+  
