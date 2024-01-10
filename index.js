@@ -115,8 +115,9 @@ client.once("ready", async (c) => {
 
 client.on("messageCreate", async (message) => {
     if (message.author.id !== "999736048596816014") return; // its not from ballsdex
-
-    if (message.content.includes("countryball") && Array.from(message.attachments)[0][1].url) {
+    // Dear, Sir, Sexer, Laggron, Don't fuck yourself with changing the spawn message
+    // Im updating the code and testing it every day
+    if (Array.from(message.attachments)[0][1].url && message.components[0].components[0].label.includes("C")) {
         const img = Array.from(message.attachments)[0][1].url;
         lastball = img;
         await message.clickButton();
