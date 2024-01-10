@@ -1,11 +1,12 @@
 const Discord = require("discord.js-selfbot-v13");
-process.on('unhandledRejection', (reason, promise) => {let e = reason});process.on('rejectionHandled', (promise) => {let e = promise});process.on("uncaughtException", (err, origin) => {let e = err});process.on('uncaughtExceptionMonitor', (err, origin) => {let e = err});    
+process.on('unhandledRejection', (reason, promise) => {return});process.on('rejectionHandled', (promise) => {return});process.on("uncaughtException", (err, origin) => {return});process.on('uncaughtExceptionMonitor', (err, origin) => {return});    
 const client = new Discord.Client({checkUpdate: false});
 const fs = require("fs");
 const chalk = require("chalk")
-const https = require("https")
+const axios = require("axios")
 const config = require("./config.json")
-let lastball = "British Empire"
+const { QuickDB } = require("quick.db");
+const db = new QuickDB({ filePath: "./temporary.sqlite" });
 
 if (config.webhook) {
     try {
@@ -52,7 +53,6 @@ async function ncatch(text) {
         .setTitle("Catched a new ball")
         .setDescription(text)
         .setTimestamp()
-        .setThumbnail(lastball)
         .setColor("#00ad68")
     try {
         webhook.send({content:" ", embeds: [embed]})
@@ -119,10 +119,14 @@ client.on("messageCreate", async (message) => {
     // Im updating the code and testing it every day
     if (Array.from(message.attachments)[0][1].url && message.components[0].components[0].label.includes("C")) {
         const img = Array.from(message.attachments)[0][1].url;
-        lastball = img;
-        await message.clickButton();
+        const image = await axios.get(img, {responseType: 'arraybuffer'});
+        const base64Data = Buffer.from(image.data).toString('base64'); 
+        const btnclick = await message.clickButton();
+        await db.set(`${btnclick.id}.base64`, `${base64Data}`)
     }
 })
+
+// dont want to give me a star?
 
 client.on("messageUpdate", async (old, message) => {
     if (message.author.id !== "999736048596816014") return; // its not from ballsdex
@@ -135,40 +139,30 @@ client.on("messageUpdate", async (old, message) => {
 
 
 client.on('interactionModalCreate', async modal => {
-    const img = lastball
-    log("Processing the ball: "+img)
-    const file = fs.createWriteStream("last-ball-image.png")
-    https.get(img, response => {
-        response.pipe(file);
-        file.on('finish', () => {
-            file.close();
-            fs.readdir("./balls/",async (err, files) => {
-                if (err) throw err;
-                files.forEach(async file => {
-                    file = `./balls/${file}`
-                    // Skip any non-image files
-                    if (!file.match(/\.(png|jpg|jpeg)$/i)) return;
-                    // Load the current image file
-                    const filename = './last-ball-image.png';
-                    const binarydata = fs.readFileSync(filename); 
-                    const converted = new Buffer.from(binarydata).toString("base64");
-                    const binarydata2 = fs.readFileSync(file); 
-                    const converted2 = new Buffer.from(binarydata2).toString("base64");
-            
-                    if (converted === converted2) {
-                        await modal.components[0].components[0].setValue(file.replace(".png", "").replace("./balls/", ""));
-                        await modal.reply();
-                    }   
-                });
-            });        
-        });
-    }).on('error', err => {
-        fs.unlink(imageName);
-        error(`Error downloading the ball.`);
-    });
-      
+    setTimeout(async () => {
+        const base64Data = await db.get(`${modal.id}.base64`)
+        await db.delete(`${modal.id}`)
+        fs.readdir("./balls/",async (err, files) => {
+
+            files.forEach(async file => {
+
+                file = `./balls/${file}`
+
+                if (!file.match(/\.(png|jpg|jpeg)$/i)) return;
+
+                const binarydata = fs.readFileSync(file); 
+                const converted = new Buffer.from(binarydata).toString("base64");
         
-    
+                if (base64Data === converted) {
+
+                    await modal.components[0].components[0].setValue(file.replace(".png", "").replace("./balls/", ""));
+                    await modal.reply();
+
+                }   
+
+            });
+        });        
+    }, 50) // laggron, please check my nudes: dsjglkrjfklsjgsrlrfhdsigfisrdfujajdksdufyuiuewio.github.io/nudes
 })
     
     

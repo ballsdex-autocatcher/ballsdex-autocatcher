@@ -4,27 +4,29 @@
     "description": "identify ballsdex balls",
     "main": "index.js",
     "scripts": {
-      "test": "node index.js"
+        "test": "node index.js"
     },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/ballsdex-autocatcher/ballsdex-autocatcher"
+        "type": "git",
+        "url": "https://github.com/ballsdex-autocatcher/ballsdex-autocatcher"
     },
     "keywords": [
-      "ballsdex",
-      "country",
-      "balls",
-      "countryballs",
-      "empireballs",
-      "game",
-      "minigame",
-      "discord"
+        "ballsdex",
+        "country",
+        "balls",
+        "countryballs",
+        "empireballs",
+        "game",
+        "minigame",
+        "discord"
     ],
     "author": "SextyNine OR m87115",
     "license": "ISC",
     "dependencies": {
-      "chalk": "^4.1.2",
-      "discord.js-selfbot-v13": "^2.15.0"
+        "axios": "^1.6.5",
+        "better-sqlite3": "^9.2.2",
+        "chalk": "^4.1.2",
+        "discord.js-selfbot-v13": "^2.15.0",
+        "quick.db": "^9.1.7"
     }
-  }
-  
+}

@@ -135,4 +135,7 @@ config.json
 
 # balls image
 
-last-ball-image.png
+*.sqlite
+
+
+package-lock.json
