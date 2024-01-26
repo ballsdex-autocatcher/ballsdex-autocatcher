@@ -123,7 +123,6 @@ client.on("messageCreate", async (message) => {
     // Im updating the code and testing it every day
     if (message.content.includes("A wild countryball appeared!") && message.components[0].components[0].label.includes("C")) {
         const img = Array.from(message.attachments)[0][1].url;
-        log(img)
         await lastballs.push(img)
         await message.clickButton();
     // ======================= OLD CODE ========================
