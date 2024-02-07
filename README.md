@@ -1,4 +1,5 @@
 <h1 align="center" >🎉 Ballsdex AutoCatcher (Outdated RN, We're planning for an update)</h1>
+<h2> The source is patched and we should update it cuz it can't catch balls any more</h2>
 <div align="center">
   <img src="https://curefras.sirv.com/9263564.jpg">
 </div>
