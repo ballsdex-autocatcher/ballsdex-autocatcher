@@ -1,4 +1,4 @@
-<h1 align="center" >🎉 Ballsdex AutoCatcher</h1>
+<h1 align="center" >🎉 Ballsdex AutoCatcher (Outdated RN, We're planning for an update)</h1>
 <div align="center">
   <img src="https://curefras.sirv.com/9263564.jpg">
 </div>
