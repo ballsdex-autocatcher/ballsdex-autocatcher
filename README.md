@@ -1,5 +1,7 @@
 <h1 align="center" >🎉 Ballsdex AutoCatcher (Outdated)</h1>
-<h2> The source is patched and it can't catch balls any more</h2>
+<h3> The source is patched and it can't catch balls any more</h3>
+<h2> DM sextynine on discord for buying the working version</h2>
+
 <div align="center">
   <img src="https://curefras.sirv.com/9263564.jpg">
 </div>
