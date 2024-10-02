@@ -15,5 +15,3 @@ class Ping(commands.Cog):
 
 async def setup(c):
     await c.add_cog(Ping(c))
-
-# sigma skibidi gyat
