@@ -1,0 +1,6 @@
+git+https://github.com/dolfies/discord.py-self@renamed#egg=selfcord.py
+colorlog
+pydantic_settings
+requests
+Pillow
+numpy
