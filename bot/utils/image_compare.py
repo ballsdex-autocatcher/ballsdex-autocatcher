@@ -1,12 +1,12 @@
 import os as _os
 from multiprocessing import Pool
-from typing import Dict, List, Optional
+from typing import Sequence, Optional
 
 import numpy as _np
 from PIL import Image as _Image
 
 
-def load_images(folder_path):
+def load_images(folder_path: str):
     images = []
     for filename in _os.listdir(folder_path):
         if filename.endswith(('.png', '.jpg', '.jpeg')):
@@ -14,7 +14,7 @@ def load_images(folder_path):
             images.append((filename, _Image.open(img_path).convert('RGBA')))
     return images
 
-def preprocess_image(image, resize_shape=(15,15)):
+def preprocess_image(image: str, resize_shape: Sequence[int] = (15,15)):
     image = image.resize(resize_shape, _Image.Resampling.LANCZOS)
     image_array = _np.array(image)
     mask = image_array[:, :, 3] > 0
@@ -25,7 +25,7 @@ def mse(image1, image2, mask):
     mse_value = _np.sum(diff[mask]) / _np.sum(mask)
     return mse_value
 
-def compare_images(target_image, target_mask, images):
+def compare_images(target_image: str, target_mask, images: Sequence[str]):
     def process_image(image_tuple):
         filename, image = image_tuple
         preprocessed_image, mask = preprocess_image(image)
