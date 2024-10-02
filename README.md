@@ -1,2 +1,1 @@
-Publishing soon
-Please wait
+Currently waiting for a README file
