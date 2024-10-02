@@ -16,7 +16,8 @@ class OnMessage(commands.Cog):
         blacklisted = self.client.db.get('blacklisted_channels') or []
         if message.channel.id in blacklisted: return
 
-        if message.author.bot and message.author.id == 999736048596816014 and "wild" in message.content:
+        if message.author.bot and message.author.id == 999736048596816014 and \
+                "wild" in message.content.lower():
             start = datetime.datetime.now()
             self.client.balls_cache["job"] = start
             blacklisted = self.client.db.get('blacklisted_channels')
