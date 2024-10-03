@@ -12,7 +12,7 @@ class Client(_commands.Bot):
         self.logger = _Logger("core.client")
 
         self.db = Database('main.sqlite')
-        self.db.setup()
+        self.db._setup()
 
         self.balls_cache = {}
 
@@ -30,7 +30,6 @@ class Client(_commands.Bot):
 
         self.logger.success(f"Discord Client Logged in as {self.user.name}")
 
-        # Cogs loading shits
         self.logger.info("Started Loading Cogs")
     
         for dir in list_all_dirs("./extensions"):
