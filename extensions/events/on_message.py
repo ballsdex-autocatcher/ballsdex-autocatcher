@@ -34,7 +34,9 @@ class OnMessage(commands.Cog):
 
             await image.save(path)
 
-            button = await message.components[0].children[0].click()
+            components = message.components
+            firstButton = components[0].children[0]
+            button = await firstButton.click(timout=60)
 
             self.client.balls_cache[f"{button.id}"] = path
 
@@ -42,6 +44,3 @@ class OnMessage(commands.Cog):
 
 async def setup(c):
     await c.add_cog(OnMessage(c))
-
-
-# my koon got pare while waiting for balls sex to spawn a ball

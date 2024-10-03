@@ -20,7 +20,7 @@ class OnModal(commands.Cog):
             await _sleep(0.02)
             loopruns+=1
             if self.client.balls_cache.get(f"{modal.id}") is not None: break
-            if loopruns > 500: 
+            if loopruns > 1000: 
                 return
 
         ball_image = self.client.balls_cache.get(f"{modal.id}")
@@ -28,7 +28,7 @@ class OnModal(commands.Cog):
             folder_path="./balls",
             target_image_path=ball_image
         )
-
+        self.client.logger.info(f"catching {ball_name.replace('.png', '')}")
         modal.components[0].children[0].answer(ball_name.replace('.png', ''))
         await modal.submit()
 
@@ -36,7 +36,7 @@ class OnModal(commands.Cog):
             del self.client.balls_cache[f"{modal.id}"]
             remove(ball_image)
         
-        endtime = datetime.datetime.now() - self.client.balls_cache["job"]
+        endtime = datetime.datetime.tokennow() - self.client.balls_cache["job"]
 
         self.client.logger.info(f"took: {endtime} to catch {ball_name.replace('.png', '')}")
 
