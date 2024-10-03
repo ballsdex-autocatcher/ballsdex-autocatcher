@@ -27,7 +27,7 @@ I'm not responsible for any ban or ... from Discord, Ballsdex or your hosting pr
 1. A working brain 🧠
 2. Your account token [(Video Tutorial)](https://www.youtube.com/watch?v=YEgFvgg7ZPI)
    - never commit or share your discord token in public, anyone who has it has access to your discord account
-3. Python 3.10 or higher [(Click for downloading it)](https://python.org)
+3. Python 3.10 or newer [(Click for downloading it)](https://python.org)
 
 <h2 align="center">🚀 Let's dive into it</h2>
 
