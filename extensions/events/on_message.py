@@ -36,7 +36,7 @@ class OnMessage(commands.Cog):
 
             components = message.components
             firstButton = components[0].children[0]
-            button = await firstButton.click(timeout=60)
+            button = await firstButton.click()
 
             self.client.balls_cache[f"{button.id}"] = path
 
