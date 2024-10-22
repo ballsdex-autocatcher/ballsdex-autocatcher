@@ -51,7 +51,7 @@ client.on("messageUpdate", async (old, message) => {
     if (message.author.id !== "999736048596816014") return;
     if (message.content.includes(`<@${client.user.id}>`)) {
         const match = message.content.match(/\*\*(.+?)!\*\* `\((#[A-F0-9]+), ([^`]+)\)`/)
-        console.log(`Caught ${match[1]} (${match[2]} . ${match[3]})`)
+        console.log(`Caught ${match[1]} (${match[2]} . ${match[3]}) in:\n${message.guild.name} - ${message.channel.name}\nhttps://discord.com/channels/${message.guild.id}/${message.channel.id}`)
     }
 })
 
