@@ -25,7 +25,7 @@ client.once("ready", async (c) => {
 
 client.on("messageCreate", async (message) => {
     if (
-        message.author.id === "1172064193856409600" && 
+        message.author.id === "999736048596816014" && 
         !(client.config.whitelistedServers.lenght > 0 && [message.guild.id, message.guild.name].some(item => client.config.whitelistedServers.includes(item))) &&
         [message.guild.id, message.guild.name].some(item => !client.config.blacklistedServers.includes(item)) &&
         message.content.includes("countryball appeared!")
