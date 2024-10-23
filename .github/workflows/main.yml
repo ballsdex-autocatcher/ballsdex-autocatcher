@@ -3,7 +3,7 @@ name: Update balls
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'  # Every 30 minutes
+    - cron: '0 0 * * *'  # Every 30 minutes
 
 permissions:
   contents: write
