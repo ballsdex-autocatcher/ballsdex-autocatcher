@@ -33,11 +33,14 @@ jobs:
     - name: Fetching images
       run: node scrapper.js
 
-    - name: Committing changes
+    - name: Check for changes and commit
       run: |
         git config --global user.name "${{ env.author }}"
         git config --global user.email "username@users.noreply.github.com"
-        git add balls
-        git commit -m "${{ env.commit }}"
-        git pull --rebase --autostash origin main
-        git push
+
+        if ! git diff --quiet; then git stash; fi
+        git pull --rebase
+
+        if git stash list | grep -q 'stash@{0}'; then git stash pop; fi
+
+        git diff --exit-code || (git add balls && git commit -m "${{ env.commit }}" && git push)
