@@ -67,3 +67,14 @@ node index.js
 
 Now wait for the text (USERNAME is ready) and then your selfbot is online and catching countryballs automatically.<br>
 Dont forget to star ⭐
+
+<h1 align="center"> How to farm balls with 100% efficiency and 100% safety:</h1>
+
+Make an alt then make 100 servers with the following server template:<br>
+Name: "Farm Server"<br>
+Channels: "General"<br>
+Now add ballsdex, 2 shape inc bots (https://platform.shapes.inc/) and other 6 bots of choice<br>
+Now setup those shapes so that they send messages in the channel everytime you send a message<br>
+Join the servers on your main and then put "Farm Server" in the config of your auto catch<br>
+Run the autocatch<br>
+You are succesfully farming balls with 100% efficiency and 100% safety!<br>
