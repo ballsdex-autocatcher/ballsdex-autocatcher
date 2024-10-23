@@ -1,6 +1,6 @@
 module.exports = async (client) => {
     for (const server of client.config.farmServers) {
-        const guilds = client.guilds.cache.filter(server => server.name === server || server.id === server)
+        const guilds = [...client.guilds.cache.values()].filter(server => server.name === server || server.id === server)
         for (const guild of guilds) {
             const channel = guild.channels.cache.find(channel => 
                 channel.type === 'GUILD_TEXT' && 
