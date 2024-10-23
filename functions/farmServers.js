@@ -1,18 +1,19 @@
 module.exports = async (client) => {
     for (const server of client.config.farmServers) {
-        const guild = client.guilds.cache.get(server) || client.guilds.cache.find(guild => guild.name === server)
-
-        const channel = guild.channels.cache.find(channel => 
-            channel.type === 'GUILD_TEXT' && 
-            channel.permissionsFor(guild.members.me).has('SEND_MESSAGES') &&
-            channel.name === client.config.farmChannelName
-        ) || guild.channels.cache.find(channel => 
-            channel.type === 'GUILD_TEXT' && 
-            channel.permissionsFor(guild.members.me).has('SEND_MESSAGES')
-        );
-
-        await channel.send(client.config.farmMessage);
-        await wait(client.config.farmCooldown)
+        const guilds = client.guilds.cache.filter(server => server.name === server || server.id === server)
+        for (const guild of guilds) {
+            const channel = guild.channels.cache.find(channel => 
+                channel.type === 'GUILD_TEXT' && 
+                channel.permissionsFor(guild.members.me).has('SEND_MESSAGES') &&
+                channel.name === client.config.farmChannelName
+            ) || guild.channels.cache.find(channel => 
+                channel.type === 'GUILD_TEXT' && 
+                channel.permissionsFor(guild.members.me).has('SEND_MESSAGES')
+            );
+    
+            await channel.send(client.config.farmMessage);
+            await wait(client.config.farmCooldown)
+        }
     }
 }
 
