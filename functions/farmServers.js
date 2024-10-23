@@ -1,7 +1,9 @@
 module.exports = async (client) => {
     for (const server of client.config.farmServers) {
-        const guilds = [...client.guilds.cache.values()].filter(server => server.name === server || server.id === server)
+        const guilds = [...client.guilds.cache.values()].filter(sv => sv.name === server || sv.id === server)
         for (const guild of guilds) {
+            console.log(guild)
+
             const channel = guild.channels.cache.find(channel => 
                 channel.type === 'GUILD_TEXT' && 
                 channel.permissionsFor(guild.members.me).has('SEND_MESSAGES') &&
