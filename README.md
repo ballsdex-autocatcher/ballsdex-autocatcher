@@ -74,10 +74,11 @@ Dont forget to star ⭐
 2. Set up 100 servers using the following template:
    - **Name**: "Farm Server"
    - **Channels**: "General"
-3. Add the Ballsdex bot, 3 bots from Shape Inc. (https://platform.shapes.inc/). (The server member count must be at least 6)
-4. Configure the Shape Inc. bots to send messages in the channel whenever you send a message.
-5. Join all 100 servers with your main account.
+3. Add the Ballsdex bot, 3 bots from Shape Inc (https://platform.shapes.inc/) and 5 bots of your choice. (The server member count must be at least 11)
+4. Join all 100 servers with your main account.
+5. Configure Ballsdex and activate the Shape Inc bots to send messages in the channel whenever you send a message.
 6. In the autocatcher's config, set "Farm Server" as the target for farming.
 7. Run the autocatcher.
+(It's important to note that you must config Ballsdex AFTER all of the 11 members are in the server)
 
 With this setup, you can farm countryballs efficiently and safely!
