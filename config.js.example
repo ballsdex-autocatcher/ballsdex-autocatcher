@@ -1,0 +1,38 @@
+module.exports = {
+    token: "sex",
+
+    // Servers u want the bot to not catch anything in
+    blacklistedServers: [
+        "ServerNameOrID1",
+        "ServerNameOrID2",
+        "ServerNameOrID3"
+    ],
+
+    // Servers u want the bot to only catch there
+    // This shit will be disabled if nothing in the list
+    whitelistedServers: [
+        "ServerNameOrID1",
+        "ServerNameOrID2",
+        "ServerNameOrID3"
+    ],
+
+    // the Server u want the bot to send a message every hour to
+    // This shit will be disabled if nothing in the list
+    farmServers: [
+        "ServerNameOrID1",
+        "ServerNameOrID2",
+        "ServerNameOrID3"
+    ],
+
+    // this field is used to get a channel from the farm servers using name (it will use the first channel if not provided)
+    farmChannelName: 'general',
+    // this message would be sent in the set interval to all the farm servers
+    farmMessage: 'spawn',
+    // this cooldown is enforced after each message in guilds so the bot wouldn't get ratelimited (miliseconds)
+    farmCooldown: 5000,
+    // time to sleep after sending a message to all of the servers (miliseconds)
+    farmSleepTime: 1800000,
+
+    // Extra wait time for clicking the button on ballsdex balls
+    timeout: [10, 1000]
+}
