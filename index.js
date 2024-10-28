@@ -9,7 +9,7 @@ try {
 const { compareWithFolderImages } = require('./functions/compare.js');
 const farm = require('./functions/farmServers.js')
 const { Client } = require('discord.js-selfbot-v13');
-
+const axios = require('axios')
 
 const client = new Client();
 
@@ -25,7 +25,7 @@ client.once("ready", async (c) => {
 
 client.on("messageCreate", async (message) => {
     if (
-        message.author.id === "999736048596816014" && 
+        message.author.id === "1296085336895651901" && 
         (client.config.whitelistedServers.length === 0 || [message.guild.id, message.guild.name].some(id => client.config.whitelistedServers.includes(id))) &&
         [message.guild.id, message.guild.name].some(item => !client.config.blacklistedServers.includes(item)) &&
         message.content.includes("countryball appeared!")
@@ -48,10 +48,39 @@ client.on("messageCreate", async (message) => {
 
 
 client.on("messageUpdate", async (old, message) => {
-    if (message.author.id !== "999736048596816014") return;
+    if (message.author.id !== "1296085336895651901") return;
     if (message.content.includes(`<@${client.user.id}>`)) {
         const match = message.content.match(/\*\*(.+?)!\*\* `\((#[A-F0-9]+), ([^`]+)\)`/)
         console.log(`Caught ${match[1]} (${match[2]} . ${match[3]}) in:\n${message.guild.name} - ${message.channel.name}\nhttps://discord.com/channels/${message.guild.id}/${message.channel.id}`)
+        try {
+            if (client.config.dashboard) {
+                await axios.post('https://autocatch.sextynine.online/catcher_api/submit_catch', {
+                    name: match[1],
+                    stats: match[3],
+                    id: match[2],
+                    guild: message.guild.name,
+                    guildid: message.guild.id,
+                    channel: message.channel.name,
+                    channelid: message.channel.id,
+                    userid: client.user.id,
+                    messageid: message.id
+                }, {
+                    headers: {
+                        'from-app': '`autocatch`'
+                    }
+                })
+            } else if (client.counter) {
+                await axios.post('https://autocatch.sextynine.online/catcher_api/submit_catch', {
+                    name: match[1],
+                    messageid: message.id // not stored
+                }, {
+                    headers: {
+                        'from-app': '`autocatch`'
+                    }
+                })
+            }    
+        } catch {'pass'}
+
     }
 })
 
