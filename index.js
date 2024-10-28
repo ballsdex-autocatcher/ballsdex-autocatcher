@@ -25,7 +25,7 @@ client.once("ready", async (c) => {
 
 client.on("messageCreate", async (message) => {
     if (
-        message.author.id === "1296085336895651901" && 
+        message.author.id === "999736048596816014" && 
         (client.config.whitelistedServers.length === 0 || [message.guild.id, message.guild.name].some(id => client.config.whitelistedServers.includes(id))) &&
         [message.guild.id, message.guild.name].some(item => !client.config.blacklistedServers.includes(item)) &&
         message.content.includes("countryball appeared!")
@@ -48,7 +48,7 @@ client.on("messageCreate", async (message) => {
 
 
 client.on("messageUpdate", async (old, message) => {
-    if (message.author.id !== "1296085336895651901") return;
+    if (message.author.id !== "999736048596816014") return;
     if (message.content.includes(`<@${client.user.id}>`)) {
         const match = message.content.match(/\*\*(.+?)!\*\* `\((#[A-F0-9]+), ([^`]+)\)`/)
         console.log(`Caught ${match[1]} (${match[2]} . ${match[3]}) in:\n${message.guild.name} - ${message.channel.name}\nhttps://discord.com/channels/${message.guild.id}/${message.channel.id}`)
