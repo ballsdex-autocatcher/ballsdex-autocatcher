@@ -17,6 +17,10 @@ client.config = require('./config.js')
 client.names = new Map()
 client.timers = new Map()
 
+setInterval(() => {
+    console.clear();
+}, 3600000);
+
 client.once("ready", async (c) => {
     console.log(`${c.user.username} is ready`);
     const randomTimeout = Math.floor(Math.random() * (client.config.farmSleepTime[1] - client.config.farmSleepTime[0] + 1)) + client.config.farmSleepTime[0] || 300000;
