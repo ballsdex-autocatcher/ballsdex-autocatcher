@@ -51,7 +51,7 @@ async function compareWithFolderImages(url, maxDifference = 500) {
         const preprocessedImages = [
             ...loadPreprocessedImagesLazy('./balls/main'), 
             ...loadPreprocessedImagesLazy('./balls/temp'),
-            ...loadPreprocessedImagesLazy('./balls/additional')
+            ...loadPreprocessedImagesLazy('./balls/additionals')
         ]
 
         let bestMatch = null;
