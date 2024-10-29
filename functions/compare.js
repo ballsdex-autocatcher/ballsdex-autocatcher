@@ -45,10 +45,14 @@ function calculateDifference(buffer1, buffer2) {
 }
 
 // Compare with batched processing to avoid memory spikes
-async function compareWithFolderImages(url, folderPath, maxDifference = 500) {
+async function compareWithFolderImages(url, maxDifference = 500) {
     try {
         const fetchedImage = await fetchAndProcessImage(url);
-        const preprocessedImages = loadPreprocessedImagesLazy(folderPath);
+        const preprocessedImages = [
+            ...loadPreprocessedImagesLazy('./balls/main'), 
+            ...loadPreprocessedImagesLazy('./balls/temp'),
+            ...loadPreprocessedImagesLazy('./balls/additional')
+        ]
 
         let bestMatch = null;
         let bestDifference = Infinity;
