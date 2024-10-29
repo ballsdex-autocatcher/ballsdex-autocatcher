@@ -1,9 +1,11 @@
-FROM node:lts-alpine
-ENV NODE_ENV=production
-WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
-COPY . .
-RUN chown -R node /usr/src/app
-USER node
+FROM node:latest
+
+RUN mkdir -p /usr/src/bot
+WORKDIR /usr/src/bot
+
+COPY package.json /usr/src/bot
+RUN npm install
+
+COPY . /usr/src/bot
+
 CMD ["node", "index.js"]
