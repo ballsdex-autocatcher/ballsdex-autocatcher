@@ -14,6 +14,14 @@ git submodule foreach "
 "
 
 # Commit updated submodule references in the main repository
-git add .
-git commit -m "Updated submodules to latest commit on '$BRANCH'"
-echo "Submodules updated to latest commit on '$BRANCH' and committed to main repository."
+git config --global user.name "${{ env.author }}"
+git config --global user.email "username@users.noreply.github.com"
+
+git add -A
+
+if ! git diff --cached --quiet; then git stash; fi
+git pull --rebase
+
+if git stash list | grep -q 'stash@{0}'; then git stash pop; fi
+
+git diff --cached --exit-code || (git add -A && git commit -m "${{ env.commit }}" && git push)
