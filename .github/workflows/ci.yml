@@ -1,0 +1,47 @@
+name: Update balls
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0/10 * * * *'  
+
+permissions:
+  contents: write
+
+  
+jobs:
+  update:
+    name: Update the balls
+    runs-on: ubuntu-latest
+    env:
+      author: Github Actions
+      commit: Updated the balls
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch all history for git push/rebase
+
+    - name: Update submodule
+      run: |
+
+        git submodule update --init --recursive
+
+        git submodule foreach "
+        git fetch origin main &&
+        git checkout main &&
+        git pull origin main
+        "
+
+        # Commit updated submodule references in the main repository
+        git config --global user.name "${{ env.author }}"
+        git config --global user.email "username@users.noreply.github.com"
+
+        git add -A
+
+        if ! git diff --cached --quiet; then git stash; fi
+        git pull --rebase
+
+        if git stash list | grep -q 'stash@{0}'; then git stash pop; fi
+
+        git diff --cached --exit-code || (git add -A && git commit -m "${{ env.commit }}" && git push)
