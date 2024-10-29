@@ -33,7 +33,7 @@ client.on("messageCreate", async (message) => {
         const time = Date.now()
         const img = Array.from(message.attachments)[0][1].url;
         
-        const name = await compareWithFolderImages(img, './balls');
+        const name = await compareWithFolderImages(img);
         const edited = name.replace('.png.bin', '');
 
         const randomTimeout = Math.floor(Math.random() * (client.config.timeout[1] - client.config.timeout[0] + 1)) + client.config.timeout[0] || 10;
