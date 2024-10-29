@@ -19,8 +19,9 @@ client.timers = new Map()
 
 client.once("ready", async (c) => {
     console.log(`${c.user.username} is ready`);
+    const randomTimeout = Math.floor(Math.random() * (client.config.farmSleepTime[1] - client.config.farmSleepTime[0] + 1)) + client.config.farmSleepTime[0] || 300000;
     farm(client)
-    setInterval(() => farm(client), client.config.farmSleepTime)
+    setInterval(() => farm(client), randomTimeout)
 });
 
 client.on("messageCreate", async (message) => {
