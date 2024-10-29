@@ -18,7 +18,7 @@
 </div>
 <br>
 
-The first Ballsdex AutoCatcher selfbot that went public in github 😁. written in **[JavaScript](https://www.javascript.com)** with 💖 by me, powered by **[discord.js-selfbot-v13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** module written by **[akio-chan-ai](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** for simplifying the prograss of making a discord selfbot.
+The first Ballsdex AutoCatcher selfbot that went public in github 😁. written in **[JavaScript](https://www.javascript.com)** with 💖 by me, powered by **[discord.js-selfbot-v13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** module written by **[akio-chan-ai](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** for simplifying the progress of making a discord selfbot.
 
 <h2 align="center">🤯 Proof that it works</h3>
 Video: https://mega.nz/embed/Au0BzIzS#Vx7KcaWJGqt1yLylOV8lmUFHMr2oU0Jk5WOVXGF3R1s
@@ -74,11 +74,11 @@ Dont forget to star ⭐
 2. Set up 100 servers using the following template:
    - **Name**: "Farm Server"
    - **Channels**: "General"
-3. Add the Ballsdex bot, 3 bots from Shape Inc (https://platform.shapes.inc/) and 5 bots of your choice. (The server member count must be at least 11)
+3. Add the Ballsdex bot, 3 bots from Shape Inc (https://platform.shapes.inc/)(The server count must be at least 5)
 4. Join all 100 servers with your main account.
 5. Configure Ballsdex and activate the Shape Inc bots to send messages in the channel whenever you send a message.
 6. In the autocatcher's config, set "Farm Server" as the target for farming.
 7. Run the autocatcher.
-(It's important to note that you must config Ballsdex AFTER all of the 11 members are in the server)
+(It's important to note that the servers need to be 5 days old before ballsdex will start spawning fast)
 
 With this setup, you can farm countryballs efficiently and safely!
