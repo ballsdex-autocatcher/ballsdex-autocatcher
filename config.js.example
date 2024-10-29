@@ -29,12 +29,12 @@ module.exports = {
     // this message would be sent in the set interval to all the farm servers
     farmMessage: 'spawn',
     // this cooldown is enforced after each message in guilds so the bot wouldn't get ratelimited (miliseconds)
-    farmCooldown: 5000,
+    farmCooldown: [7000, 9000],
     // time to sleep after sending a message to all of the servers (miliseconds)
-    farmSleepTime: 1800000,
+    farmSleepTime: [300000, 360000],
 
     // Extra wait time for clicking the button on ballsdex balls
-    timeout: [10, 1000],
+    timeout: [500, 1000],
 
     // Dashboard: we have a website with a dashboard that u can login using ur discord account and see all of the balls caught by u and autocatcher (still in beta)
     // the stored information is not available to public and wont be shared with anyone
