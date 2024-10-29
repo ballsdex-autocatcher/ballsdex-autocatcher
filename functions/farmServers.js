@@ -12,7 +12,7 @@ module.exports = async (client) => {
             );
     
             await channel.send(client.config.farmMessage);
-            await wait(client.config.farmCooldown)
+            await wait(Math.floor(Math.random() * (client.config.farmCooldown[1] - client.config.farmCooldown[0] + 1)) + client.config.farmCooldown[0] || 300000)
         }
     }
 }
