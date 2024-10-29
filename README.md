@@ -74,7 +74,7 @@ Dont forget to star ⭐
 2. Set up 100 servers using the following template:
    - **Name**: "Farm Server"
    - **Channels**: "General"
-3. Add the Ballsdex bot, 3 bots from Shape Inc (https://platform.shapes.inc/)(The server count must be at least 5)
+3. Add the Ballsdex bot, 3 bots from [Shape Inc](https://platform.shapes.inc/) (The server count must be at least 5)
 4. Join all 100 servers with your main account.
 5. Configure Ballsdex and activate the Shape Inc bots to send messages in the channel whenever you send a message.
 6. In the autocatcher's config, set "Farm Server" as the target for farming.
