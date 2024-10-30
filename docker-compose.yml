@@ -1,6 +1,6 @@
 services:
-  ballsdexautocatcherv3:
-    image: ballsdexautocatcherv3
+  autocatch:
+    image: autocatch
     build:
       context: .
       dockerfile: ./Dockerfile
