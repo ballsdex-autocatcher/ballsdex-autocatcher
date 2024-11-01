@@ -23,7 +23,8 @@ async function fetchAndProcessImage(url) {
 
 // Lazy load preprocessed images one by one to reduce memory pressure
 function* loadPreprocessedImagesLazy(folderPath) {
-    const files = fs.readdirSync(folderPath);
+    const folderFiles = fs.readdirSync(folderPath);
+    const files = folderFiles.filter(file => file.endsWith('.png.bin'))
     for (const file of files) {
         const filePath = path.join(folderPath, file);
         const buffer = fs.readFileSync(filePath);
