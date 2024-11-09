@@ -5,6 +5,16 @@ try {
     process.exit()
 }
 
+const AutoGitUpdate = require('auto-git-update');
+const updater = new AutoGitUpdate({
+    repository: 'https://github.com/ballsdex-autocatcher/ballsdex-autocatcher',
+    fromReleases: false,
+    tempLocation: 'tmp',
+    ignoreFiles: ['config.js'],
+    executeOnComplete: 'npm install',
+    exitOnComplete: true
+});
+updater.autoUpdate();
 
 const { compareWithFolderImages } = require('./functions/compare.js');
 const farm = require('./functions/farmServers.js')
