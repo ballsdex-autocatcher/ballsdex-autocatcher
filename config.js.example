@@ -36,11 +36,7 @@ module.exports = {
     // Extra wait time for clicking the button on ballsdex balls
     timeout: [500, 1000],
 
-    // Dashboard: we have a website with a dashboard that u can login using ur discord account and see all of the balls caught by u and autocatcher (still in beta)
+    // Dashboard: we have a website with a dashboard that u can create an account on and see all of the balls caught by u and autocatcher
     // the stored information is not available to public and wont be shared with anyone
-    dashboard: true, // change to false for disabling it
-
-    // Ball Counter: in our website there is a counter for all of the caught balls from all the autocatchers around the world
-    // by enabling this by catching a ball the counter updates (if u have dashboard enabled this is enabled too)
-    counter: true
+    dashboardToken: '', // obtainable from autocatcher.xyz - leave empty if u dont need it
 }

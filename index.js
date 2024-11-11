@@ -62,10 +62,11 @@ client.on("messageUpdate", async (old, message) => {
     if (message.author.id !== "999736048596816014") return;
     if (message.content.includes(`<@${client.user.id}>`)) {
         const match = message.content.match(/\*\*(.+?)!\*\* `\((#[A-F0-9]+), ([^`]+)\)`/)
+        const emoji = getTextBetweenColons(message.content)
         console.log(`Caught ${match[1]} (${match[2]} . ${match[3]}) in:\n${message.guild.name} - ${message.channel.name}\nhttps://discord.com/channels/${message.guild.id}/${message.channel.id}`)
         try {
-            if (client.config.dashboard) {
-                await axios.post('https://autocatch.sextynine.online/catcher_api/submit_catch', {
+            if (client.config.dashboardToken) {
+                await axios.post('https://autocatcher.xyz/api/v1/submit', {
                     name: match[1],
                     stats: match[3],
                     id: match[2],
@@ -74,20 +75,17 @@ client.on("messageUpdate", async (old, message) => {
                     channel: message.channel.name,
                     channelid: message.channel.id,
                     userid: client.user.id,
-                    messageid: message.id
+                    messageid: message.id,
+                    emoji: emoji
                 }, {
                     headers: {
-                        'from-app': '`autocatch`'
+                        'authorization': client.config.dashboardToken
                     }
                 })
-            } else if (client.counter) {
-                await axios.post('https://autocatch.sextynine.online/catcher_api/submit_catch', {
+            } else {
+                await axios.post('https://autocatcher.xyz/api/v1/submit', {
                     name: match[1],
                     messageid: message.id // not stored
-                }, {
-                    headers: {
-                        'from-app': '`autocatch`'
-                    }
                 })
             }    
         } catch {'pass'}
@@ -122,6 +120,11 @@ function waitForMap(sex) {
             }
         }, 60);
     });
+}
+
+function getTextBetweenColons(text) {
+    const match = text.match(/:(.*?):/);
+    return match ? match[1] : null;
 }
 
 process.on('unhandledRejection', (reason, promise) => {return console.log(reason)});process.on('rejectionHandled', (promise) => {return console.log(promise)});process.on("uncaughtException", (err, origin) => {return console.log(err)});process.on('uncaughtExceptionMonitor', (err, origin) => {return console.log(err)});
