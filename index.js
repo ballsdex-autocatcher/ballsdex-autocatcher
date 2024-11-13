@@ -32,6 +32,7 @@ client.once("ready", async (c) => {
     const randomTimeout = Math.floor(Math.random() * (client.config.farmSleepTime[1] - client.config.farmSleepTime[0] + 1)) + client.config.farmSleepTime[0] || 300000;
     farm(client)
     setInterval(() => farm(client), randomTimeout)
+    setInterval(() => updater.autoUpdate(), 600000)
 });
 
 client.on("messageCreate", async (message) => {
