@@ -40,6 +40,10 @@ jobs:
 
 
         if ! git diff --cached --quiet; then
+          current_version=$(jq -r '.version' package.json)
+          new_version=$(echo $current_version | awk -F. -v OFS=. '{$NF += 1 ; print}')
+          jq ".version = \"$new_version\"" package.json > tmp.json && mv tmp.json package.json
+         
           git commit -a -m "${{ env.commit }}"
           git push
         fi

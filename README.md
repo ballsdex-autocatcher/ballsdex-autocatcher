@@ -33,7 +33,7 @@ I'm not responsible for any ban or ... from discord or your hosting provider.
 <h1 align="center" >💉 Requirements</h1>
 
 1. A working brain 🧠
-2. Your account token [(Video Tutorial)](https://mohammad87115.github.io/files/Copying%20token.mp4)
+2. Your account token [(Video Tutorial)](https://youtu.be/pqW553a3_Tc?si=jZTkXeR21IJheGhY)
    - never commit or share your discord token in public, anyone who has it has access to your discord account
 3. node.js v16 or higher (v20 is recomended) [(Click for downloading it)](https://nodejs.org)
 
