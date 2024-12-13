@@ -5,16 +5,6 @@ try {
     process.exit()
 }
 
-const AutoGitUpdate = require('auto-git-update');
-const updater = new AutoGitUpdate({
-    repository: 'https://github.com/ballsdex-autocatcher/ballsdex-autocatcher',
-    fromReleases: false,
-    tempLocation: 'tmp',
-    ignoreFiles: ['config.js'],
-    executeOnComplete: 'npm install',
-    exitOnComplete: true
-});
-updater.autoUpdate();
 
 const { compareWithFolderImages } = require('./functions/compare.js');
 const farm = require('./functions/farmServers.js')
@@ -29,10 +19,11 @@ client.timers = new Map()
 
 client.once("ready", async (c) => {
     console.log(`${c.user.username} is ready`);
-    const randomTimeout = Math.floor(Math.random() * (client.config.farmSleepTime[1] - client.config.farmSleepTime[0] + 1)) + client.config.farmSleepTime[0] || 300000;
+    // doing this timeout thing to prevent older versions to break
+    const timeout = client.config.farmSleepTime[0] || client.config.farmSleepTime
+
     farm(client)
-    setInterval(() => farm(client), randomTimeout)
-    setInterval(() => updater.autoUpdate(), 600000)
+    setInterval(() => farm(client), timeout)
 });
 
 client.on("messageCreate", async (message) => {

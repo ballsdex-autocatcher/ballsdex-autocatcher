@@ -31,7 +31,7 @@ module.exports = {
     // this cooldown is enforced after each message in guilds so the bot wouldn't get ratelimited (miliseconds)
     farmCooldown: [7000, 9000],
     // time to sleep after sending a message to all of the servers (miliseconds)
-    farmSleepTime: [300000, 360000],
+    farmSleepTime: 360000,
 
     // Extra wait time for clicking the button on ballsdex balls
     timeout: [500, 1000],
