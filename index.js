@@ -28,7 +28,6 @@ client.once("ready", async (c) => {
 });
 
 client.on("messageCreate", async (message) => {
-    console.log(message.content)
     if (
         message.author.id === "999736048596816014" && 
         (client.config.whitelistedServers.length === 0 || [message.guild.id, message.guild.name].some(id => client.config.whitelistedServers.includes(id))) &&
