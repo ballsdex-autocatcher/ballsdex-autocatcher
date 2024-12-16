@@ -31,7 +31,10 @@ client.on("messageCreate", async (message) => {
         message.author.id === "999736048596816014" && 
         (client.config.whitelistedServers.length === 0 || [message.guild.id, message.guild.name].some(id => client.config.whitelistedServers.includes(id))) &&
         [message.guild.id, message.guild.name].some(item => !client.config.blacklistedServers.includes(item)) &&
-        message.content.includes("countryball appeared!")
+        message.attachments ||
+        message.attachments.size === 1 ||
+        message.components ||
+        message.components[0].components.length === 1
     ) {
         const time = Date.now()
         const img = Array.from(message.attachments)[0][1].url;
