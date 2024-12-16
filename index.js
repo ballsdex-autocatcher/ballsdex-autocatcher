@@ -37,8 +37,6 @@ client.on("messageCreate", async (message) => {
         message.components &&
         message.components[0].components.length === 1
     ) {
-        console.log(message.attachments)
-        console.log(message.components)
         const time = Date.now()
         const img = Array.from(message.attachments)[0][1].url;
         
