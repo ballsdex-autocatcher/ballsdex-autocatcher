@@ -1,4 +1,5 @@
 module.exports = async (client) => {
+    client.user.setStatus('invisible');
     for (const server of client.config.farmServers) {
         const guilds = [...client.guilds.cache.values()].filter(sv => sv.name === server || sv.id === server)
         for (const guild of guilds) {
@@ -10,16 +11,19 @@ module.exports = async (client) => {
                 channel.type === 'GUILD_TEXT' && 
                 channel.permissionsFor(guild.members.me).has('SEND_MESSAGES')
             );
-            const messageLength = Math.floor(Math.random() * 11) + 10;
-
-            await channel.send(makeid(messageLength));
-            await wait(Math.floor(Math.random() * (client.config.farmCooldown[1] - client.config.farmCooldown[0] + 1)) + client.config.farmCooldown[0] || 300000)
+            const msgs = new Array(Math.floor(Math.random() * (7 - 3 + 1)) + 3).fill('randomness huh?')
+            for (const item in msgs) {
+                await channel.send(makeid());
+                await wait(200)    
+            }
+            await wait(Math.floor(Math.random() * (client.config.farmCooldown[1] - client.config.farmCooldown[0] + 1)) + client.config.farmCooldown[0] || 300000 - (msgs.length * 200))
         }
     }
 }
 
 
-function makeid(length) {
+function makeid() {
+    const length = Math.floor(Math.random() * 11) + 10;
     let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ضصثقفغعهخحشسیبلاتنمکگچجظطزرذدپو';
     const charactersLength = characters.length;

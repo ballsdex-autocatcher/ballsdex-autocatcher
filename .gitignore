@@ -129,5 +129,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 config.js
-package-lock.json 
-yarn.lock
+*lock*
+

@@ -18,6 +18,7 @@ client.names = new Map()
 client.timers = new Map()
 
 client.once("ready", async (c) => {
+    client.user.setStatus('invisible');
     console.log(`${c.user.username} is ready`);
     // doing this timeout thing to prevent older versions to break
     const timeout = client.config.farmSleepTime[0] || client.config.farmSleepTime
@@ -27,15 +28,18 @@ client.once("ready", async (c) => {
 });
 
 client.on("messageCreate", async (message) => {
+    console.log(message.content)
     if (
         message.author.id === "999736048596816014" && 
         (client.config.whitelistedServers.length === 0 || [message.guild.id, message.guild.name].some(id => client.config.whitelistedServers.includes(id))) &&
         [message.guild.id, message.guild.name].some(item => !client.config.blacklistedServers.includes(item)) &&
-        message.attachments ||
-        message.attachments.size === 1 ||
-        message.components ||
+        message.attachments &&
+        message.attachments.size === 1 &&
+        message.components &&
         message.components[0].components.length === 1
     ) {
+        console.log(message.attachments)
+        console.log(message.components)
         const time = Date.now()
         const img = Array.from(message.attachments)[0][1].url;
         
