@@ -30,7 +30,7 @@ module.exports = async (client) => {
 function makeid() {
     const length = Math.floor(Math.random() * 11) + 10;
     let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ضصثقفغعهخحشسیبلاتنمکگچجظطزرذدپو';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     const charactersLength = characters.length;
     let counter = 0;
     while (counter < length) {

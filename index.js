@@ -114,6 +114,7 @@ for (const extension of extensions) {
 
     if ('func' in ext && 'name' in ext && 'description' in ext) {
         ext.func(client)
+        logger.info(`Loaded ${ext.name} from extensions`)
     }
 }
 
