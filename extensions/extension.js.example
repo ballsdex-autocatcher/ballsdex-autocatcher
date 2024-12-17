@@ -1,0 +1,14 @@
+const { Client } = require('discord.js-selfbot-v13');
+
+module.exports = {
+    name: 'name',
+    description: 'description',
+    author: 'author',
+
+    /**
+     * @param {Client} client the client that extension needs to interact with
+     */
+    func: async (client) => {
+        // pass
+    }
+}

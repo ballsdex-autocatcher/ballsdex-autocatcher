@@ -1,3 +1,8 @@
+const { Client } = require('discord.js-selfbot-v13')
+
+/**
+ * @param {Client} client 
+ */
 module.exports = async (client) => {
     client.user.setStatus('invisible');
     for (const server of client.config.farmServers) {
@@ -35,7 +40,11 @@ function makeid() {
     return result;
 }
 
-
+/**
+ * 
+ * @param {Number} millisec 
+ * @returns Nothing but wait
+ */
 function wait(millisec) {
     return new Promise(resolve => {
         setTimeout(() => { resolve('') }, millisec);

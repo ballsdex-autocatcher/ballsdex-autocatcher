@@ -62,7 +62,11 @@ Now run the following commands in the terminal.
 ```sh
 node index.js
 ```
-
+**Common errors:**
+- if u got an error showing `illegal hardware instruction` u need to run the code with an older version of sharp (0.27.2). to do that you need to run this command for startup:
+```sh
+node index.js --legacy
+```
 Now wait for the text (USERNAME is ready) and then your selfbot is online and catching countryballs automatically.<br>
 Dont forget to star ⭐
 

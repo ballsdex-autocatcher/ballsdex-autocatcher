@@ -1,15 +1,17 @@
+const logger = require('./functions/logger.js')
 try {
     require('./config.js')
 } catch {
-    console.log('No config file found.')
+    logger.error('No config file found.')
     process.exit()
 }
-
 
 const { compareWithFolderImages } = require('./functions/compare.js');
 const farm = require('./functions/farmServers.js')
 const { Client } = require('discord.js-selfbot-v13');
 const axios = require('axios')
+const fs = require('node:fs')
+const path = require('node:path')
 
 const client = new Client();
 
@@ -19,7 +21,7 @@ client.timers = new Map()
 
 client.once("ready", async (c) => {
     client.user.setStatus('invisible');
-    console.log(`${c.user.username} is ready`);
+    logger.success(`Logged in as ${c.user.username}`);
     // doing this timeout thing to prevent older versions to break
     const timeout = client.config.farmSleepTime[0] || client.config.farmSleepTime
 
@@ -46,9 +48,13 @@ client.on("messageCreate", async (message) => {
         const randomTimeout = Math.floor(Math.random() * (client.config.timeout[1] - client.config.timeout[0] + 1)) + client.config.timeout[0] || 10;
 
         setTimeout(async () => {
-            const btn = await message.clickButton();
-            client.timers.set(btn.id, time);
-            client.names.set(btn.id, edited);
+            try {
+                const btn = await message.clickButton();
+                client.timers.set(btn.id, time);
+                client.names.set(btn.id, edited);    
+            } catch {
+                // pass
+            }
         }, randomTimeout);
     }
 });
@@ -59,7 +65,7 @@ client.on("messageUpdate", async (old, message) => {
     if (message.content.includes(`<@${client.user.id}>`)) {
         const match = message.content.match(/\*\*(.+?)!\*\* `\((#[A-F0-9]+), ([^`]+)\)`/)
         const emoji = getTextBetweenColons(message.content)
-        console.log(`Caught ${match[1]} (${match[2]} . ${match[3]}) in:\n${message.guild.name} - ${message.channel.name}\nhttps://discord.com/channels/${message.guild.id}/${message.channel.id}`)
+        logger.success(`Caught ${match[1]} (${match[2]} . ${match[3]}) in: ${message.guild.name} ${message.channel.name} - ${message.guild.id} ${message.channel.id}`)
         try {
             if (client.config.dashboardToken) {
                 await axios.post('https://autocatcher.xyz/api/v1/submit', {
@@ -94,10 +100,22 @@ client.on('interactionModalCreate', async modal => {
     await waitForMap(modal.id)
     await modal.components[0].components[0].setValue(client.names.get(modal.id));
     await modal.reply();
-    console.log(`Caught ${client.names.get(modal.id)} in ${Math.round((Date.now() - client.timers.get(modal.id)) / 100) / 10} seconds`)
+    logger.success(`Caught ${client.names.get(modal.id)} in ${Math.round((Date.now() - client.timers.get(modal.id)) / 100) / 10} seconds`)
     await client.names.delete(modal.id)
     await client.timers.delete(modal.id)
 })
+
+const extensionsDir = path.join(__dirname, 'extensions')
+const extensionFiles = fs.readdirSync(extensionsDir)
+const extensions = extensionFiles.filter(file => file.endsWith('.js'))
+for (const extension of extensions) {
+    const extensionPath = path.join(extensionsDir, extension)
+    const ext = require(extensionPath)
+
+    if ('func' in ext && 'name' in ext && 'description' in ext) {
+        ext.func(client)
+    }
+}
 
 client.login(client.config.token)
 
@@ -123,4 +141,4 @@ function getTextBetweenColons(text) {
     return match ? match[1] : null;
 }
 
-process.on('unhandledRejection', (reason, promise) => {return console.log(reason)});process.on('rejectionHandled', (promise) => {return console.log(promise)});process.on("uncaughtException", (err, origin) => {return console.log(err)});process.on('uncaughtExceptionMonitor', (err, origin) => {return console.log(err)});
+process.on('unhandledRejection', (reason, promise) => {return logger.error(`${reason}: ${promise}`)});process.on('rejectionHandled', (promise) => {return logger.error(promise)});process.on("uncaughtException", (err, origin) => {return logger.error(`${err}: ${origin}`)});process.on('uncaughtExceptionMonitor', (err, origin) => {return logger.error(`${err}: ${origin}`)});

@@ -1,9 +1,16 @@
-const sharp = require('sharp');
+if (process.argv.includes('--old') || process.argv.includes('--legacy') || process.argv.includes('-l') || process.argv.includes('-o')) {
+    var sharp = require('sharp-legacy')
+} else {
+    var sharp = require('sharp');
+}
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
-
-// Helper to fetch and process image from URL
+const logger = require('./logger.js')
+/**
+ * @param {String} url 
+ * @returns the name of the image: British Empire.png.bin
+ */
 async function fetchAndProcessImage(url) {
     try {
         const response = await axios.get(url, { responseType: 'arraybuffer' });
@@ -16,7 +23,8 @@ async function fetchAndProcessImage(url) {
             .raw()
             .toBuffer();
     } catch (error) {
-        console.error('Error fetching image:', error);
+        logger.error('Error fetching image:', error);
+        console.log(error)
         throw error;
     }
 }
@@ -72,7 +80,6 @@ async function compareWithFolderImages(url, maxDifference = 500) {
 
                     // Early exit on a near-perfect match
                     if (difference < maxDifference) {
-                        console.log(`Early exit: ${preprocessed.filename} with a difference of ${difference}`);
                         return preprocessed.filename;
                     }
 
@@ -93,7 +100,6 @@ async function compareWithFolderImages(url, maxDifference = 500) {
                 const difference = calculateDifference(fetchedImage, preprocessed.buffer);
 
                 if (difference < maxDifference) {
-                    console.log(`Early exit: ${preprocessed.filename} with a difference of ${difference}`);
                     return preprocessed.filename;
                 }
 
@@ -106,7 +112,7 @@ async function compareWithFolderImages(url, maxDifference = 500) {
 
         return bestMatch;  // Return the best match after all comparisons
     } catch (error) {
-        console.error('Error during comparison:', error);
+        logger.error('Error during comparison:', error);
     }
 }
 
