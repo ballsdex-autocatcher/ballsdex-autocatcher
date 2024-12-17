@@ -21,7 +21,7 @@ module.exports = async (client) => {
                 await channel.send(makeid());
                 await wait(500)    
             }
-            await wait(Math.floor(Math.random() * (client.config.farmCooldown[1] - client.config.farmCooldown[0] + 1)) + client.config.farmCooldown[0] || 300000))
+            await wait((Math.floor(Math.random() * (client.config.farmCooldown[1] - client.config.farmCooldown[0] + 1)) + client.config.farmCooldown[0]) || 30000)
         }
     }
 }
