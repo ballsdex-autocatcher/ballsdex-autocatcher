@@ -16,7 +16,7 @@ module.exports = async (client) => {
                 channel.type === 'GUILD_TEXT' && 
                 channel.permissionsFor(guild.members.me).has('SEND_MESSAGES')
             );
-            const msgs = new Array(Math.floor(Math.random() * (7 - 3 + 1)) + 3).fill('randomness huh?')
+            const msgs = new Array(Math.floor(Math.random() * (3 - 2 + 1)) + 2).fill('randomness huh?')
             for (const item in msgs) {
                 await channel.send(makeid());
                 await wait(500)    
