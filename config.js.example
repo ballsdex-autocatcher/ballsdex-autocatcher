@@ -27,7 +27,7 @@ module.exports = {
     // this field is used to get a channel from the farm servers using name (it will use the first channel if not provided)
     farmChannelName: 'general',
     // this cooldown is enforced after each message in guilds so the bot wouldn't get ratelimited (miliseconds)
-    farmCooldown: [7000, 9000],
+    farmCooldown: [9000, 11000],
     // time to sleep after sending a message to all of the servers (miliseconds)
     farmSleepTime: 360000,
 
