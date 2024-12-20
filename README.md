@@ -23,7 +23,7 @@ The first Ballsdex AutoCatcher selfbot that went public in github 😁. written 
 <h2 align="center"> 📽️ video tutorial (click on the image to watch on youtube) </h2>
 <div align="center">
   <a href="https://youtu.be/RlQTHTncw2Y">
-    <img src="https://img.youtube.com/vi/RlQTHTncw2Y/0.jpg" alt="Watch the video" width="600">
+    <img src="https://img.youtube.com/vi/RlQTHTncw2Y/0.jpg" alt="Watch the video" width="auto" height="360">
   </a>
 </div>
 
