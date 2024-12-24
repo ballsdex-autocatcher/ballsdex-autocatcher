@@ -95,16 +95,6 @@ client.on("messageUpdate", async (old, message) => {
     }
 })
 
-
-client.on('interactionModalCreate', async modal => {
-    await waitForMap(modal.id)
-    await modal.components[0].components[0].setValue(client.names.get(modal.id));
-    await modal.reply();
-    logger.success(`Caught ${client.names.get(modal.id)} in ${Math.round((Date.now() - client.timers.get(modal.id)) / 100) / 10} seconds`)
-    await client.names.delete(modal.id)
-    await client.timers.delete(modal.id)
-})
-
 const extensionsDir = path.join(__dirname, 'extensions')
 const extensionFiles = fs.readdirSync(extensionsDir)
 const extensions = extensionFiles.filter(file => file.endsWith('.js'))
