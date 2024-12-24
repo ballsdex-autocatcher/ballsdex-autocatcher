@@ -32,7 +32,7 @@ module.exports = {
     farmSleepTime: 910000,
 
     // Extra wait time for clicking the button on ballsdex balls
-    timeout: [30000, 60000], // for ensuring the new anti autocatching things got deleted and delay the catch
+    timeout: [500, 1000], // for ensuring the new anti autocatching things got deleted and delay the catch
 
     // Dashboard: we have a website with a dashboard that u can create an account on and see all of the balls caught by u and autocatcher
     // the stored information is not available to public and wont be shared with anyone

@@ -31,7 +31,7 @@ client.once("ready", async (c) => {
 
 client.on("messageCreate", async (message) => {
     if (
-        message.author.id === "1172064193856409600" && 
+        message.author.id === "999736048596816014" && 
         (client.config.whitelistedServers.length === 0 || [message.guild.id, message.guild.name].some(id => client.config.whitelistedServers.includes(id))) &&
         [message.guild.id, message.guild.name].some(item => !client.config.blacklistedServers.includes(item)) &&
         message.attachments &&
@@ -41,7 +41,7 @@ client.on("messageCreate", async (message) => {
     ) {
         const time = Date.now()
         const img = Array.from(message.attachments)[0][1].url;
-        
+        console.log(1)
         const name = await compareWithFolderImages(img);
         if (!name) return logger.info('Ignored a ball');
         const edited = name.replace('.png.bin', '');
@@ -51,10 +51,11 @@ client.on("messageCreate", async (message) => {
         setTimeout(async () => {
             try {
                 const btn = await message.clickButton();
-                client.timers.set(btn.id, time);
-                client.names.set(btn.id, edited);    
+                await btn.components[0].components[0].setValue(edited);
+                await btn.reply();
+                logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`)
             } catch {
-                // pass
+                logger.error(`Failed to catch ${edited}`)
             }
         }, randomTimeout);
     }
