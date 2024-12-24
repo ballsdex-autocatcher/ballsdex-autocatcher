@@ -39,23 +39,37 @@ client.on("messageCreate", async (message) => {
     ) {
         const time = Date.now()
         const img = Array.from(message.attachments)[0][1].url;
-        console.log(1)
         const name = await compareWithFolderImages(img);
         if (!name) return logger.info('Ignored a ball');
         const edited = name.replace('.png.bin', '');
 
         const randomTimeout = Math.floor(Math.random() * (client.config.timeout[1] - client.config.timeout[0] + 1)) + client.config.timeout[0] || 10;
 
+setTimeout(async () => {
+    try {
+        const btn = await message.clickButton();
+        await btn.components[0].components[0].setValue(edited);
+        await btn.reply();
+        logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
+    } catch {
+        logger.error(`Failed to catch ${edited}`);
         setTimeout(async () => {
+            logger.info(`Retrying to catch ${edited}`);
             try {
                 const btn = await message.clickButton();
                 await btn.components[0].components[0].setValue(edited);
                 await btn.reply();
-                logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`)
-            } catch {
-                logger.error(`Failed to catch ${edited}`)
+                logger.success(`Caught ${edited} on retry`);
+            } catch (error) {
+                if (error.message === 'BUTTON_NOT_FOUND') {
+                logger.success(`Caught ${edited} on retry`);
+                } else {
+                    logger.error(`Retry also failed for ${edited}: ${error.message}`);
+                }
             }
-        }, randomTimeout);
+        }, 2500);
+    }
+}, randomTimeout);
     }
 });
 
