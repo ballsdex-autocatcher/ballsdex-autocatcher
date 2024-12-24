@@ -20,7 +20,7 @@ const logLevels = {
     },
 };
 module.exports = class Logger {
-    static log(level, message) {
+    static _log(level, message) {
         const { color, label } = logLevels[level] || logLevels.INFO;
         const date = new Date()
         const timestamp = chalk.gray(`[${date.toLocaleString()}]`);
@@ -35,19 +35,21 @@ module.exports = class Logger {
 
     }
   
+    static log = this.info
+    
     static info(message) {
-        Logger.log('INFO', message);
+        Logger._log('INFO', message);
     }
   
     static warning(message) {
-        Logger.log('WARNING', message);
+        Logger._log('WARNING', message);
     }
   
     static error(message) {
-        Logger.log('ERROR', message);
+        Logger._log('ERROR', message);
     }
   
     static success(message) {
-        Logger.log('SUCCESS', message);
+        Logger._log('SUCCESS', message);
     }
 }
