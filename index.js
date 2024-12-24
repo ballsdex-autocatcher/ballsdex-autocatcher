@@ -16,8 +16,6 @@ const path = require('node:path')
 const client = new Client();
 
 client.config = require('./config.js')
-client.names = new Map()
-client.timers = new Map()
 
 client.once("ready", async (c) => {
     client.user.setStatus('invisible');
@@ -121,23 +119,6 @@ for (const extension of extensions) {
 }
 
 client.login(client.config.token)
-
-function waitForMap(sex) {
-    return new Promise((resolve) => {
-        var num = 0
-        const interval = setInterval(() => {
-            if (client.names.get(sex)) {
-                clearInterval(interval);
-                resolve();
-            } else if (num >= 1000) {
-                clearInterval(interval);
-                return;
-            } else {
-                num++
-            }
-        }, 60);
-    });
-}
 
 function getTextBetweenColons(text) {
     const match = text.match(/:(.*?):/);
