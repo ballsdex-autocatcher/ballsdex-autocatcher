@@ -77,7 +77,6 @@ async function compareWithFolderImages(url, maxDifference = 500) {
                 // Process the current batch
                 currentBatch.forEach(preprocessed => {
                     const difference = calculateDifference(fetchedImage, preprocessed.buffer);
-
                     // Early exit on a near-perfect match
                     if (difference < maxDifference) {
                         return preprocessed.filename;
@@ -110,7 +109,8 @@ async function compareWithFolderImages(url, maxDifference = 500) {
             });
         }
 
-        return bestMatch;  // Return the best match after all comparisons
+        return bestDifference > 10000 ? false : bestMatch;
+
     } catch (error) {
         logger.error('Error during comparison:', error);
     }
