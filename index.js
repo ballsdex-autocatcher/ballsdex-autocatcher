@@ -27,6 +27,19 @@ client.once("ready", async (c) => {
     setInterval(() => farm(client), timeout)
 });
 
+let variable = 0;
+let increases = 0;
+let ballsPerHour = 0;
+
+setInterval(async () => {
+    increases += 1
+}, 3600000);
+
+setInterval(async () => {
+    ballsPerHour = Math.floor(variable/increases)
+    logger.info(`Balls per hour: ${ballsPerHour}`)
+}, 3600001);
+
 client.on("messageCreate", async (message) => {
     if (
         message.author.id === "999736048596816014" && 
@@ -60,14 +73,16 @@ setTimeout(async () => {
                 await btn.components[0].components[0].setValue(edited);
                 await btn.reply();
                 logger.success(`Caught ${edited} on retry`);
+                logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
             } catch (error) {
                 if (error.message === 'BUTTON_NOT_FOUND') {
                 logger.success(`Caught ${edited} on retry`);
+                logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
                 } else {
                     logger.error(`Retry also failed for ${edited}: ${error.message}`);
                 }
             }
-        }, 2500);
+        }, 3000);
     }
 }, randomTimeout);
     }
@@ -80,6 +95,7 @@ client.on("messageUpdate", async (old, message) => {
         const match = message.content.match(/\*\*(.+?)!\*\* `\((#[A-F0-9]+), ([^`]+)\)`/)
         const emoji = getTextBetweenColons(message.content)
         logger.success(`Caught ${match[1]} (${match[2]} . ${match[3]}) in: ${message.guild.name} ${message.channel.name} - ${message.guild.id} ${message.channel.id}`)
+        variable += 1;
         try {
             if (client.config.dashboardToken) {
                 await axios.post('https://autocatcher.xyz/api/v1/submit', {
