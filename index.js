@@ -56,7 +56,7 @@ client.on("messageCreate", async (message) => {
         if (!name) return logger.info('Ignored a ball');
         const edited = name.replace('.png.bin', '');
 
-        const randomTimeout = Math.floor(Math.random() * (client.config.timeout[1] - client.config.timeout[0] + 1)) + client.config.timeout[0] || 10;
+        const randomTimeout = Math.floor(Math.random() * (client.config.timeout[1] - client.config.timeout[0] + 1)) + client.config.timeout[0];
 
 setTimeout(async () => {
     try {
@@ -96,6 +96,20 @@ client.on("messageUpdate", async (old, message) => {
         const emoji = getTextBetweenColons(message.content)
         logger.success(`Caught ${match[1]} (${match[2]} . ${match[3]}) in: ${message.guild.name} ${message.channel.name} - ${message.guild.id} ${message.channel.id}`)
         variable += 1;
+
+        if (client.config.messageCooldown[2] && ![message.guild.id, message.guild.name].some(id => client.config.farmServers.includes(id))){
+        const randomMessage = client.config.messages[Math.floor(Math.random() * client.config.messages.length)];
+        const messageCooldown = Math.floor(Math.random() * (client.config.messageCooldown[1] - client.config.messageCooldown[0] + 1)) + client.config.messageCooldown[0];
+
+        setTimeout(async () => {
+            message.channel.sendTyping();
+            setTimeout(async () => {
+                message.channel.send(randomMessage);
+                console.log(`Sent "${randomMessage}" in: ${message.guild.name}`);
+            }, messageCooldown);
+        }, (10/100)*messageCooldown);
+    }
+        
         try {
             if (client.config.dashboardToken) {
                 await axios.post('https://autocatcher.xyz/api/v1/submit', {
