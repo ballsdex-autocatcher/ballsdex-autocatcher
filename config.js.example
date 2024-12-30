@@ -1,5 +1,5 @@
 module.exports = {
-    token: "sex", // video tutorial: https://youtu.be/pqW553a3_Tc
+    token: "sex", // video tutorial: https://youtu.be/RlQTHTncw2Y
 
     // Servers u want the bot to not catch anything in
     blacklistedServers: [
@@ -9,32 +9,73 @@ module.exports = {
     ],
 
     // Servers u want the bot to only catch there
-    // This shit will be disabled if nothing in the list
+    // This shit will be disabled if nothing is in the list
     whitelistedServers: [
         "ServerNameOrID1",
         "ServerNameOrID2",
         "ServerNameOrID3"
     ],
 
-    // the Server u want the bot to send a message every hour to
-    // This shit will be disabled if nothing in the list
+    // The server u want the bot to send a message every hour to
+    // This shit will be disabled if nothing is in the list
     farmServers: [
         "ServerNameOrID1",
         "ServerNameOrID2",
         "ServerNameOrID3"
     ],
 
-    // this field is used to get a channel from the farm servers using name (it will use the first channel if not provided)
+    // This field is used to get a channel from the farm servers using their name (It will use the first channel if not provided)
     farmChannelName: 'general',
-    // this cooldown is enforced after each message in guilds so the bot wouldn't get ratelimited (miliseconds)
+    // This cooldown is enforced after each message in guilds so the bot doesn't get ratelimited (miliseconds)
     farmCooldown: [9000, 11000],
-    // time to sleep after sending a message to all of the servers (miliseconds)
+    // Time to sleep after sending a message to all of the servers (miliseconds)
     farmSleepTime: 920000,
 
-    // Extra wait time for clicking the button on ballsdex balls
+    // Extra wait time for clicking the button on Ballsdex balls
     timeout: [500, 1000],
 
-    // Dashboard: we have a website with a dashboard that u can create an account on and see all of the balls caught by u and autocatcher
-    // the stored information is not available to public and wont be shared with anyone
-    dashboardToken: '', // obtainable from autocatcher.xyz - leave empty if u dont need it
+    // Cooldown for sending a message after a catch. (Leave this false if you dont want to send anything). Note that this won't send a message in farm servers
+    messageCooldown: [2000, 4000, false],
+
+    // Table of messages to send after a catch
+    messages: [
+        "GG",
+        "lmao",
+        "nice",
+        "omg",
+        "ez",
+        "ez snipe",
+        "haha",
+        "real",
+        "too easy",
+        "baller",
+        "AYY",
+        "what",
+        "Yaya",
+        "LMAO",
+        "ok",
+        "snipe",
+        "mobile ez",
+        "Yay",
+        "nahhh",
+        "xd",
+        "ez farm",
+        "ez snipe lol",
+        "ez farm lol",
+        "ez ball",
+        "mobile btw",
+        "poop",
+        "ezzz",
+        "cracked af",
+        "lol",
+        "noob",
+        "W",
+        ":skull:",
+        ":yawning_face:",
+        "no way:skull:"
+    ],
+
+    // Dashboard: We have a website with a dashboard that u can create an account on and see all of the balls caught by your autocatcher
+    // The stored information is not available to the public and won't be shared with anyone
+    dashboardToken: '', // Obtainable from autocatcher.xyz - leave empty if u don't need it
 }
