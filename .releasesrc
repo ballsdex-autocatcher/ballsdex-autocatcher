@@ -1,0 +1,17 @@
+{
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/git"
+  ],
+  "github": {
+    "assets": [
+      "dist/.tar.gz",
+      "dist/.zip",
+      "dist/*.bin"
+    ]
+  }
+}
