@@ -16,7 +16,7 @@ jobs:
     env:
       token: ${{ secrets.DiscordToken }}
       author: Github Actions
-      commit: "fix: Updated the balls"
+      commit: "fix(balls): Updated the balls"
       path: ../balls/main
 
     steps:
