@@ -1,3 +1,17 @@
+## [1.0.13](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.12...v1.0.13) (2025-01-01)
+
+
+### Bug Fixes
+
+* **balls:** Update commit message format in update.yml workflow ([869d4eb](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/869d4ebea32c067782a8db02d6ee5ca7717e9abf))
+
+## [1.0.13](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.12...v1.0.13) (2025-01-01)
+
+
+### Bug Fixes
+
+* **balls:** Update commit message format in update.yml workflow ([869d4eb](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/869d4ebea32c067782a8db02d6ee5ca7717e9abf))
+
 ## [1.0.12](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.11...v1.0.12) (2025-01-01)
 
 
