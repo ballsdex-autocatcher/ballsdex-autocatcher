@@ -6,12 +6,5 @@
     "@semantic-release/changelog",
     "@semantic-release/github",
     "@semantic-release/git"
-  ],
-  "github": {
-    "assets": [
-      "dist/.tar.gz",
-      "dist/.zip",
-      "dist/*.bin"
-    ]
-  }
+  ]
 }
