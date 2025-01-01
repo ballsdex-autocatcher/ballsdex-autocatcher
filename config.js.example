@@ -1,5 +1,5 @@
 module.exports = {
-    token: "sex", // video tutorial: https://youtu.be/RlQTHTncw2Y
+    token: "YourDiscordAccountToken", // video tutorial: https://youtu.be/RlQTHTncw2Y
 
     // Servers u want the bot to not catch anything in
     blacklistedServers: [
