@@ -9,5 +9,11 @@
     "discord.js-selfbot-v13": "^3.4.6",
     "sharp": "^0.33.5",
     "sharp-legacy": "npm:sharp@0.27.2"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "semantic-release": "^24.2.0"
   }
 }
