@@ -1,3 +1,19 @@
+## [1.0.15](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.14...v1.0.15) (2025-01-01)
+
+
+### Bug Fixes
+
+* **readme:** Correct href attributes in README.md and add version badge ([6786c92](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/6786c92f293ea96c7707ef9782cd679b3cfe4f49))
+* **release:** Remove unnecessary [skip ci] from release commit message format ([327412c](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/327412c9e9b15be48faff9b0d53b839a8e5fa152))
+
+## [1.0.15](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.14...v1.0.15) (2025-01-01)
+
+
+### Bug Fixes
+
+* **readme:** Correct href attributes in README.md and add version badge ([6786c92](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/6786c92f293ea96c7707ef9782cd679b3cfe4f49))
+* **release:** Remove unnecessary [skip ci] from release commit message format ([327412c](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/327412c9e9b15be48faff9b0d53b839a8e5fa152))
+
 ## [1.0.14](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.13...v1.0.14) (2025-01-01)
 
 
