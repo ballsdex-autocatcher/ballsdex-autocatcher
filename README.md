@@ -93,3 +93,13 @@ Dont forget to star ⭐
 (It's important to note that the servers need to be 5 days old before ballsdex will start spawning fast)
 
 With this setup, you can farm countryballs efficiently and safely!
+
+<h2 align="center">🤝 Contributors</h2>
+<p align="center"> 
+  <a href="https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=ballsdex-autocatcher/ballsdex-autocatcher" alt="Contributors"/>
+  </a>
+</p>
+<p align="center">
+  Made with <a rel="" target="_blank" href="https://contrib.rocks">Contrib.Rocks</a>
+</p>
