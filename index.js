@@ -17,6 +17,8 @@ const client = new Client();
 
 client.config = require('./config.js')
 
+let balls = 0;
+
 client.once("ready", async (c) => {
     client.user.setStatus('invisible');
     logger.success(`Logged in as ${c.user.username}`);
@@ -27,18 +29,12 @@ client.once("ready", async (c) => {
     setInterval(() => farm(client), timeout)
 });
 
-let variable = 0;
-let increases = 0;
-let ballsPerHour = 0;
 
 setInterval(async () => {
-    increases += 1
-}, 3600000);
-
-setInterval(async () => {
-    ballsPerHour = Math.floor(variable/increases)
+    const uptime = process.uptime()
+    const ballsPerHour = Math.floor(balls / (uptime / 60 / 60))
     logger.info(`Balls per hour: ${ballsPerHour}`)
-}, 3600001);
+}, 30 * 60 * 1000);
 
 client.on("messageCreate", async (message) => {
     if (
@@ -95,7 +91,8 @@ client.on("messageUpdate", async (old, message) => {
         const match = message.content.match(/\*\*(.+?)!\*\* `\((#[A-F0-9]+), ([^`]+)\)`/)
         const emoji = getTextBetweenColons(message.content)
         logger.success(`Caught ${match[1]} (${match[2]} . ${match[3]}) in: ${message.guild.name} ${message.channel.name} - ${message.guild.id} ${message.channel.id}`)
-        variable += 1;
+        balls += 1;
+
 
         if (client.config.messageCooldown[2] && ![message.guild.id, message.guild.name].some(id => client.config.farmServers.includes(id))){
         const randomMessage = client.config.messages[Math.floor(Math.random() * client.config.messages.length)];
