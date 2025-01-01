@@ -20,7 +20,7 @@
 <br>
 
 
-The first Ballsdex AutoCatcher selfbot that went public in github 😁. written in **[JavaScript](https://www.javascript.com)** with 💖 by me, powered by **[discord.js-selfbot-v13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** module written by **[akio-chan-ai](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** for simplifying the progress of making a discord selfbot.<br><br>Contact sextynine on discord if u had any questions<br><br>Visit our website [here](https://autocatcher.xyz)
+The first Ballsdex AutoCatcher selfbot that went open-source in github 😁. written in **[JavaScript](https://www.javascript.com)** with 💖 by me, powered by **[discord.js-selfbot-v13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** module written by **[akio-chan-ai](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** for simplifying the progress of making a discord selfbot.<br><br>Contact sextynine on discord if u had any questions<br><br>Visit our website [here](https://autocatcher.xyz)
 
 <h2 align="center"> 📽️ video tutorial (click on the image to watch on youtube) </h2>
 <div align="center">
