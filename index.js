@@ -93,7 +93,7 @@ client.on("messageUpdate", async (old, message) => {
         logger.success(`Caught ${match[1]} (${match[2]} . ${match[3]}) in: ${message.guild.name} ${message.channel.name} - ${message.guild.id} ${message.channel.id}`)
         balls += 1;
 
-        if (client.config.messageCooldown && client.config.messages && ![message.guild.id, message.guild.name].some(id => client.config.farmServers.includes(id))){
+        if (client.config.messageCooldown && client.config.messageCooldown.length && client.config.messages && ![message.guild.id, message.guild.name].some(id => client.config.farmServers.includes(id))){
         const randomMessage = client.config.messages[Math.floor(Math.random() * client.config.messages.length)];
         const messageCooldown = Math.floor(Math.random() * (client.config.messageCooldown[1] - client.config.messageCooldown[0] + 1)) + client.config.messageCooldown[0];
 
