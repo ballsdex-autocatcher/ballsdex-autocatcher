@@ -25,6 +25,10 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Install semantic-release changelog
+        run: |
+          npm install --save-dev @semantic-release/changelog
+
       # 3. Run semantic-release
       - name: Run semantic-release
         run: npx semantic-release
