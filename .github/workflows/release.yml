@@ -4,23 +4,28 @@ on:
   push:
     branches:
       - master
+      - dev
 
 jobs:
   release:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # 2. Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: '16'
 
+      # 3. Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
+      # 4. Run semantic-release
       - name: Run semantic-release
         run: npx semantic-release
         env:
