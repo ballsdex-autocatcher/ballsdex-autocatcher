@@ -11,12 +11,14 @@
   <a herf="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 </div>
 <div align="center">
-  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/stars/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
-  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/forks/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
-  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/issues/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
-  <a herf="https://github.com/mohammad87115/ballsdex-autocatcher/"><img src="https://img.shields.io/github/license/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
+  <a href="https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/"><img src="https://img.shields.io/github/stars/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
+  <a href="https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/"><img src="https://img.shields.io/github/forks/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
+  <a href="https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/"><img src="https://img.shields.io/github/issues/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
+  <a href="https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/"><img src="https://img.shields.io/github/license/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
+  <a href="https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/releases/latest"><img src="https://img.shields.io/github/v/release/ballsdex-autocatcher/autocatcher.svg?style=for-the-badge"></a>
 </div>
 <br>
+
 
 The first Ballsdex AutoCatcher selfbot that went public in github 😁. written in **[JavaScript](https://www.javascript.com)** with 💖 by me, powered by **[discord.js-selfbot-v13](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** module written by **[akio-chan-ai](https://github.com/aiko-chan-ai/discord.js-selfbot-v13)** for simplifying the progress of making a discord selfbot.<br><br>Contact sextynine on discord if u had any questions<br><br>Visit our website [here](https://autocatcher.xyz)
 
