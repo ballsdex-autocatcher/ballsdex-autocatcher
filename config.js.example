@@ -35,7 +35,7 @@ module.exports = {
     timeout: [500, 1000],
 
     // Cooldown for sending a message after a catch. (Leave this false if you dont want to send anything). Note that this won't send a message in farm servers
-    messageCooldown: [2000, 4000, false],
+    messageCooldown: [1000, 3000],
 
     // Table of messages to send after a catch
     messages: [
