@@ -1,3 +1,17 @@
+## [1.0.14](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.13...v1.0.14) (2025-01-01)
+
+
+### Bug Fixes
+
+* **release:** Correct GITHUB_TOKEN secret reference in release workflow ([77bd061](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/77bd061314bbb70044923e1374b8afec07b93bc5))
+
+## [1.0.14](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.13...v1.0.14) (2025-01-01)
+
+
+### Bug Fixes
+
+* **release:** Correct GITHUB_TOKEN secret reference in release workflow ([77bd061](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/77bd061314bbb70044923e1374b8afec07b93bc5))
+
 ## [1.0.13](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.12...v1.0.13) (2025-01-01)
 
 
