@@ -25,12 +25,6 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install semantic-release dependencies
-        run: |
-          npm install --save-dev semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github
-
-      
-
       # 3. Run semantic-release
       - name: Run semantic-release
         run: npx semantic-release
