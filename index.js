@@ -52,6 +52,11 @@ client.on("messageCreate", async (message) => {
         if (!name) return logger.info('Ignored a ball');
         const edited = name.replace('.png.bin', '');
 
+        if (
+            (client.config.whitelistedBalls.length === 0 || client.config.whitelistedBalls.includes(edited)) &&
+            !client.config.blacklistedBalls.includes(edited)
+        ) {
+
         const randomTimeout = Math.floor(Math.random() * (client.config.timeout[1] - client.config.timeout[0] + 1)) + client.config.timeout[0];
 
 setTimeout(async () => {
@@ -82,6 +87,7 @@ setTimeout(async () => {
     }
 }, randomTimeout);
     }
+}
 });
 
 
