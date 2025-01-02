@@ -1,3 +1,31 @@
+# 1.0.0 (2025-01-02)
+
+
+### Bug Fixes
+
+* Add missing comma in semantic-release configuration for Git plugin ([5e0d732](https://github.com/Saberton1/ballsdex-autocatcher/commit/5e0d7328081d05d5b7814ca60de59cb284a23890))
+* **balls:** Update commit message format in update.yml workflow ([869d4eb](https://github.com/Saberton1/ballsdex-autocatcher/commit/869d4ebea32c067782a8db02d6ee5ca7717e9abf))
+* **readme:** Correct href attributes in README.md and add version badge ([6786c92](https://github.com/Saberton1/ballsdex-autocatcher/commit/6786c92f293ea96c7707ef9782cd679b3cfe4f49))
+* refactor: Remove redundant installation step for semantic-release dependencies in release workflow ([aedbb01](https://github.com/Saberton1/ballsdex-autocatcher/commit/aedbb01b298ad3aedcb239783ec3621a5d4a50ec))
+* **release:** Correct GITHUB_TOKEN secret reference in release workflow ([77bd061](https://github.com/Saberton1/ballsdex-autocatcher/commit/77bd061314bbb70044923e1374b8afec07b93bc5))
+* **release:** Remove unnecessary [skip ci] from release commit message format ([327412c](https://github.com/Saberton1/ballsdex-autocatcher/commit/327412c9e9b15be48faff9b0d53b839a8e5fa152))
+* Update commit message format in update.yml workflow ([c37b219](https://github.com/Saberton1/ballsdex-autocatcher/commit/c37b2193ebd4a6e2504d11fa43cfb61e7321c0cf))
+* Update release workflow to include installation of semantic-release dependencies ([beb66dd](https://github.com/Saberton1/ballsdex-autocatcher/commit/beb66dd5797895db4b42bcc49cc69db34cbc4e45))
+
+# 1.0.0 (2025-01-02)
+
+
+### Bug Fixes
+
+* Add missing comma in semantic-release configuration for Git plugin ([5e0d732](https://github.com/Saberton1/ballsdex-autocatcher/commit/5e0d7328081d05d5b7814ca60de59cb284a23890))
+* **balls:** Update commit message format in update.yml workflow ([869d4eb](https://github.com/Saberton1/ballsdex-autocatcher/commit/869d4ebea32c067782a8db02d6ee5ca7717e9abf))
+* **readme:** Correct href attributes in README.md and add version badge ([6786c92](https://github.com/Saberton1/ballsdex-autocatcher/commit/6786c92f293ea96c7707ef9782cd679b3cfe4f49))
+* refactor: Remove redundant installation step for semantic-release dependencies in release workflow ([aedbb01](https://github.com/Saberton1/ballsdex-autocatcher/commit/aedbb01b298ad3aedcb239783ec3621a5d4a50ec))
+* **release:** Correct GITHUB_TOKEN secret reference in release workflow ([77bd061](https://github.com/Saberton1/ballsdex-autocatcher/commit/77bd061314bbb70044923e1374b8afec07b93bc5))
+* **release:** Remove unnecessary [skip ci] from release commit message format ([327412c](https://github.com/Saberton1/ballsdex-autocatcher/commit/327412c9e9b15be48faff9b0d53b839a8e5fa152))
+* Update commit message format in update.yml workflow ([c37b219](https://github.com/Saberton1/ballsdex-autocatcher/commit/c37b2193ebd4a6e2504d11fa43cfb61e7321c0cf))
+* Update release workflow to include installation of semantic-release dependencies ([beb66dd](https://github.com/Saberton1/ballsdex-autocatcher/commit/beb66dd5797895db4b42bcc49cc69db34cbc4e45))
+
 ## [1.0.15](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.14...v1.0.15) (2025-01-01)
 
 
