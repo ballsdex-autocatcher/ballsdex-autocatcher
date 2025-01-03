@@ -1,3 +1,17 @@
+## [1.0.16](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.15...v1.0.16) (2025-01-03)
+
+
+### Bug Fixes
+
+* **config and formatting:** minor changes ([afca3f6](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/afca3f618d51b8ce1c11dfa02b1ff74305b54d5e))
+
+## [1.0.16](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.15...v1.0.16) (2025-01-03)
+
+
+### Bug Fixes
+
+* **config and formatting:** minor changes ([afca3f6](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/afca3f618d51b8ce1c11dfa02b1ff74305b54d5e))
+
 # 1.0.0 (2025-01-02)
 
 
