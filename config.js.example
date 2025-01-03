@@ -27,17 +27,11 @@ module.exports = {
     // Balls you don't want to catch
     // This shit will be disabled if nothing is in the list
     blacklistedBalls: [
-        "Ball 1",
-        "Ball 2",
-        "Ball 3"
     ],
 
     // Balls you only want to catch
     // This shit will be disabled if nothing is in the list
     whitelistedBalls: [
-        "Ball 1",
-        "Ball 2",
-        "Ball 3"
     ],
 
     // This field is used to get a channel from the farm servers using their name (It will use the first channel if not provided)

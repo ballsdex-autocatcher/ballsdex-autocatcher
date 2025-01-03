@@ -22,7 +22,6 @@ let balls = 0;
 client.once("ready", async (c) => {
     client.user.setStatus('invisible');
     logger.success(`Logged in as ${c.user.username}`);
-    // doing this timeout thing to prevent older versions to break
     const timeout = client.config.farmSleepTime[0] || client.config.farmSleepTime
 
     farm(client)
@@ -57,37 +56,35 @@ client.on("messageCreate", async (message) => {
             !client.config.blacklistedBalls.includes(edited)
         ) {
 
-        const randomTimeout = Math.floor(Math.random() * (client.config.timeout[1] - client.config.timeout[0] + 1)) + client.config.timeout[0];
+            const randomTimeout = Math.floor(Math.random() * (client.config.timeout[1] - client.config.timeout[0] + 1)) + client.config.timeout[0];
 
-setTimeout(async () => {
-    try {
-        const btn = await message.clickButton();
-        await btn.components[0].components[0].setValue(edited);
-        await btn.reply();
-        logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
-    } catch {
-        logger.error(`Failed to catch ${edited}`);
-        setTimeout(async () => {
-            logger.info(`Retrying to catch ${edited}`);
-            try {
-                const btn = await message.clickButton();
-                await btn.components[0].components[0].setValue(edited);
-                await btn.reply();
-                logger.success(`Caught ${edited} on retry`);
-                logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
-            } catch (error) {
-                if (error.message === 'BUTTON_NOT_FOUND') {
-                logger.success(`Caught ${edited} on retry`);
-                logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
-                } else {
-                    logger.error(`Retry also failed for ${edited}: ${error.message}`);
+            setTimeout(async () => {
+                try {
+                    const btn = await message.clickButton();
+                    await btn.components[0].components[0].setValue(edited);
+                    await btn.reply();
+                    logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
+                } catch {
+                    logger.error(`Failed to catch ${edited}`);
+                    setTimeout(async () => {
+                        logger.info(`Retrying to catch ${edited}`);
+                        try {
+                            const btn = await message.clickButton();
+                            await btn.components[0].components[0].setValue(edited);
+                            await btn.reply();
+                            logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
+                        } catch (error) {
+                            if (error.message === 'BUTTON_NOT_FOUND') {
+                            logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds on retry`);
+                            } else {
+                                logger.error(`Retry also failed for ${edited}: ${error.message}`);
+                            }
+                        }
+                    }, 3000);
                 }
-            }
-        }, 3000);
+            }, randomTimeout);
+        }
     }
-}, randomTimeout);
-    }
-}
 });
 
 
