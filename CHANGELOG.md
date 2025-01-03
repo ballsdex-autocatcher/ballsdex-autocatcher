@@ -1,3 +1,19 @@
+# [1.1.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.16...v1.1.0) (2025-01-03)
+
+
+### Features
+
+* **balls:** Blacklist and whitelist for balls from [#38](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/issues/38) ([89c59b9](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/89c59b9ff0d20a8f427f1d6a86fb913c9078c88f))
+* **cli configurator:** configuration made easy using npm commands: npm run config ([5cbc828](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/5cbc82846fe52c0ff16575e65ed8febda2f2eb13))
+
+# [1.1.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.16...v1.1.0) (2025-01-03)
+
+
+### Features
+
+* **balls:** Blacklist and whitelist for balls from [#38](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/issues/38) ([89c59b9](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/89c59b9ff0d20a8f427f1d6a86fb913c9078c88f))
+* **cli configurator:** configuration made easy using npm commands: npm run config ([5cbc828](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/5cbc82846fe52c0ff16575e65ed8febda2f2eb13))
+
 ## [1.0.16](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.15...v1.0.16) (2025-01-03)
 
 
