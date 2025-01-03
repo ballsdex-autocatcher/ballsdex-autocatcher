@@ -24,6 +24,7 @@ module.exports = {
         "ServerNameOrID3"
     ],
 
+
     // This field is used to get a channel from the farm servers using their name (It will use the first channel if not provided)
     farmChannelName: 'general',
     // This cooldown is enforced after each message in guilds so the bot doesn't get ratelimited (miliseconds)
