@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.1.0...v1.2.0) (2025-01-03)
+
+
+### Features
+
+* **configuration:** easy configuration ([a44b27c](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/a44b27ca5c50fd517917d0b1d699f95d64cf2187))
+
+# [1.2.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.1.0...v1.2.0) (2025-01-03)
+
+
+### Features
+
+* **configuration:** easy configuration ([a44b27c](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/a44b27ca5c50fd517917d0b1d699f95d64cf2187))
+
 # [1.1.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.0.16...v1.1.0) (2025-01-03)
 
 
