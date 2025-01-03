@@ -22,10 +22,13 @@ let balls = 0;
 client.once("ready", async (c) => {
     client.user.setStatus('invisible');
     logger.success(`Logged in as ${c.user.username}`);
-    const timeout = client.config.farmSleepTime[0] || client.config.farmSleepTime
 
-    farm(client)
-    setInterval(() => farm(client), timeout)
+    if (client.config.farmServers.length > 0) {
+        const timeout = client.config.farmSleepTime[0] || client.config.farmSleepTime
+
+        farm(client)
+        setInterval(() => farm(client), timeout)
+    }
 });
 
 

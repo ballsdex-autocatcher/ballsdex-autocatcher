@@ -24,16 +24,6 @@ module.exports = {
         "ServerNameOrID3"
     ],
 
-    // Balls you don't want to catch
-    // This shit will be disabled if nothing is in the list
-    blacklistedBalls: [
-    ],
-
-    // Balls you only want to catch
-    // This shit will be disabled if nothing is in the list
-    whitelistedBalls: [
-    ],
-
     // This field is used to get a channel from the farm servers using their name (It will use the first channel if not provided)
     farmChannelName: 'general',
     // This cooldown is enforced after each message in guilds so the bot doesn't get ratelimited (miliseconds)
@@ -84,6 +74,17 @@ module.exports = {
         ":yawning_face:",
         "no way:skull:"
     ],
+
+    // Balls you don't want to catch
+    // This shit will be disabled if nothing is in the list
+    blacklistedBalls: [
+    ],
+
+    // Balls you only want to catch
+    // This shit will be disabled if nothing is in the list
+    whitelistedBalls: [
+    ],
+
 
     // Dashboard: We have a website with a dashboard that u can create an account on and see all of the balls caught by your autocatcher
     // The stored information is not available to the public and won't be shared with anyone
