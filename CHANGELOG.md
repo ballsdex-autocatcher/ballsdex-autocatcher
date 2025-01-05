@@ -1,3 +1,17 @@
+## [1.3.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.0...v1.3.1) (2025-01-05)
+
+
+### Bug Fixes
+
+* **update-version:** correct file path to package.json in version update script ([42856c2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/42856c2b4cadbcdb61ad827d5878abd3d1cf7460))
+
+## [1.3.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.0...v1.3.1) (2025-01-05)
+
+
+### Bug Fixes
+
+* **update-version:** correct file path to package.json in version update script ([42856c2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/42856c2b4cadbcdb61ad827d5878abd3d1cf7460))
+
 # [1.3.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.2...v1.3.0) (2025-01-05)
 
 
