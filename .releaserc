@@ -4,10 +4,6 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      {
-        "path": "@semantic-release/exec",
-        "publishCmd": "node .github/update-version.js ${nextRelease.version}"
-      },
       [
         "@semantic-release/changelog",
         {
@@ -20,6 +16,10 @@
         {
           "assets": ["CHANGELOG.md", "package.json"],
           "message": "chore(release): set `package.json` to ${nextRelease.version} \n\n${nextRelease.notes}"
+        },
+        {
+          "path": "@semantic-release/exec",
+          "publishCmd": "node .github/update-version.js ${nextRelease.version}"
         }
       ]
     ]
