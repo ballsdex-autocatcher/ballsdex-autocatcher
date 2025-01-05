@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.3...v1.3.4) (2025-01-05)
+
+
+### Bug Fixes
+
+* **compare:** increase image resize dimensions from 32x32 to 64x64 ([b72242c](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/b72242c0061447e833d85f3e2883cd57d5416790))
+
 ## [1.3.3](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.2...v1.3.3) (2025-01-05)
 
 
