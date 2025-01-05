@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.4...v1.3.5) (2025-01-05)
+
+
+### Bug Fixes
+
+* **compare:** going back to 32x32 resizing cuz i failed pushing the new balls to the repo ([596892d](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/596892d86aa4b060f602522da4546f6eb0e37ce3))
+
 ## [1.3.4](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.3...v1.3.4) (2025-01-05)
 
 
