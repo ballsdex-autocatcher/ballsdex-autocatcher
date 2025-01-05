@@ -1,3 +1,17 @@
+## [1.2.2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.1...v1.2.2) (2025-01-05)
+
+
+### Bug Fixes
+
+* **compare:** adjusted max difference allowed for catching ([1894ae9](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/1894ae9b2db98b310c17c5af2b8bef7e24664139))
+
+## [1.2.2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.1...v1.2.2) (2025-01-05)
+
+
+### Bug Fixes
+
+* **compare:** adjusted max difference allowed for catching ([1894ae9](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/1894ae9b2db98b310c17c5af2b8bef7e24664139))
+
 ## [1.2.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.0...v1.2.1) (2025-01-05)
 
 
