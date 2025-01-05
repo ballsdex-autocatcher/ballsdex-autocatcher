@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.2...v1.3.0) (2025-01-05)
+
+
+### Features
+
+* **release:** add @semantic-release/exec for version update automation ([3764794](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/3764794d4ae1339a5f747741287fcef9f1f3253f))
+
+# [1.3.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.2...v1.3.0) (2025-01-05)
+
+
+### Features
+
+* **release:** add @semantic-release/exec for version update automation ([3764794](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/3764794d4ae1339a5f747741287fcef9f1f3253f))
+
 ## [1.2.2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.1...v1.2.2) (2025-01-05)
 
 
