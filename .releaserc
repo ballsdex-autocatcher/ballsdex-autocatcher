@@ -6,7 +6,7 @@
     "@semantic-release/changelog",
     {
       "path": "@semantic-release/exec",
-      "prepareCmd": "node .github/update-version.js ${nextRelease.version}"
+      "prepareCmd": "jq '.version = \"${nextRelease.version}\"' package.json > package.json.temp && mv package.json.temp package.json"
     },
     "@semantic-release/github",
     [
