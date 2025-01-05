@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const filePath = '../package.json';
+const filePath = './package.json';
 const newVersion = process.argv[2];
 
 if (!newVersion) {
