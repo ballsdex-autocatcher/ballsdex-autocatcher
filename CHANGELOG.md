@@ -1,3 +1,17 @@
+## [1.2.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.0...v1.2.1) (2025-01-05)
+
+
+### Bug Fixes
+
+* **compare:** adjust threshold for best match comparison ([5529715](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/5529715c5ae201e9ec502df805dcbc9049b10894))
+
+## [1.2.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.2.0...v1.2.1) (2025-01-05)
+
+
+### Bug Fixes
+
+* **compare:** adjust threshold for best match comparison ([5529715](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/5529715c5ae201e9ec502df805dcbc9049b10894))
+
 # [1.2.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.1.0...v1.2.0) (2025-01-03)
 
 
