@@ -17,7 +17,7 @@ async function fetchAndProcessImage(url) {
         const imageBuffer = Buffer.from(response.data, 'binary');
         
         return sharp(imageBuffer)
-            .resize(32, 32)
+            .resize(64, 64)
             .grayscale()
             .removeAlpha()
             .raw()
