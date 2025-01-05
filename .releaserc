@@ -4,6 +4,10 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
+      {
+        "path": "@semantic-release/exec",
+        "publishCmd": "node .github/update-version.js ${nextRelease.version}"
+      },
       [
         "@semantic-release/changelog",
         {
@@ -11,7 +15,6 @@
         }
       ],
       "@semantic-release/github",
-
       [
         "@semantic-release/git",
         {

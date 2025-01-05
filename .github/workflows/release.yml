@@ -28,7 +28,7 @@ jobs:
       # 3. Install semantic-release dependencies
       - name: Install semantic-release dependencies
         run: |
-          npm install --save-dev semantic-release @semantic-release/changelog 
+          npm install --save-dev semantic-release @semantic-release/changelog @semantic-release/exec 
 
       # 4. Run semantic-release
       - name: Run semantic-release
