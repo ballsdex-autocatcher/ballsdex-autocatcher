@@ -108,9 +108,8 @@ async function compareWithFolderImages(url, maxDifference = 500) {
                 }
             });
         }
-
-        return bestDifference > 10000 ? false : bestMatch;
-
+        return bestDifference > 15000 ? false : bestMatch;
+        
     } catch (error) {
         logger.error('Error during comparison:', error);
     }
