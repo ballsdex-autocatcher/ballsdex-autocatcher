@@ -1,3 +1,21 @@
+## [1.3.2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.1...v1.3.2) (2025-01-05)
+
+
+### Bug Fixes
+
+* **compare:** removed unnecessery console logging thing ([77c12a4](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/77c12a4348b7740973abda9dcd6d95db41b9ddbe))
+* **releaserc:** correct structure of exec plugin configuration for version update command ([70c5e7f](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/70c5e7f10b6e3c794c40bfd26853c2cd0c209c36))
+* **releaserc:** restore exec plugin for version update command ([919cb2a](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/919cb2af3d18c42e44bda68aaa7d3f7914be9363))
+
+## [1.3.2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.1...v1.3.2) (2025-01-05)
+
+
+### Bug Fixes
+
+* **compare:** removed unnecessery console logging thing ([77c12a4](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/77c12a4348b7740973abda9dcd6d95db41b9ddbe))
+* **releaserc:** correct structure of exec plugin configuration for version update command ([70c5e7f](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/70c5e7f10b6e3c794c40bfd26853c2cd0c209c36))
+* **releaserc:** restore exec plugin for version update command ([919cb2a](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/919cb2af3d18c42e44bda68aaa7d3f7914be9363))
+
 ## [1.3.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.0...v1.3.1) (2025-01-05)
 
 
