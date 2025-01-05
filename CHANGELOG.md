@@ -1,3 +1,11 @@
+## [1.3.3](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.2...v1.3.3) (2025-01-05)
+
+
+### Bug Fixes
+
+* **release:** enable debug mode for semantic-release ([8f7295f](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/8f7295f994b385541bf791d45997013c4206bce6))
+* **releaserc:** update exec plugin configuration for version preparation command ([daaee1a](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/daaee1a8d180084f4efc0adc4df02b4a3ad9176a))
+
 ## [1.3.2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.1...v1.3.2) (2025-01-05)
 
 
