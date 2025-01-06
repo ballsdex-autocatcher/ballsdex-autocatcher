@@ -3,6 +3,14 @@
 
 ### Bug Fixes
 
+* **compare:** Removed unnecessary logging ([c5413b3](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/c5413b33fa8bc85e9353b922a0690b763243ce71))
+* Merge pull request [#39](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/issues/39) from Saberton1/patch-7 ([7dba9ca](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/7dba9ca9f06e3bc78c0a72117b9798e985b1bc0e))
+
+## [1.3.9](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.8...v1.3.9) (2025-01-06)
+
+
+### Bug Fixes
+
 * Merge pull request [#39](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/issues/39) from Saberton1/patch-7 ([7dba9ca](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/7dba9ca9f06e3bc78c0a72117b9798e985b1bc0e))
 
 ## [1.3.9](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.8...v1.3.9) (2025-01-06)
