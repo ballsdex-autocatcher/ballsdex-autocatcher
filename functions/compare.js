@@ -17,7 +17,7 @@ async function fetchAndProcessImage(url) {
         const imageBuffer = Buffer.from(response.data, 'binary');
         
         return sharp(imageBuffer)
-            .resize(32, 32)
+            .resize(64, 64)
             .grayscale()
             .removeAlpha()
             .raw()
@@ -108,7 +108,9 @@ async function compareWithFolderImages(url, maxDifference = 500) {
                 }
             });
         }
-        return bestDifference > 17000 ? false : bestMatch;
+
+        console.log(bestDifference, bestMatch)
+        return bestDifference > 60000 ? false : bestMatch;
         
     } catch (error) {
         logger.error('Error during comparison:', error);
