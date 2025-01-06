@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.9...v1.4.0) (2025-01-06)
+
+
+### Features
+
+* **compare:** Adopting chatgpt generated code to make admins cry ([ce71c74](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/ce71c741be95915d4121918f6374e2d5d08f0c1d))
+
 ## [1.3.9](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.8...v1.3.9) (2025-01-06)
 
 
