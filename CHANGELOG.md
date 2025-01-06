@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.4.0...v1.4.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* **additionals:** Updating balls.additionals ([c157d22](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/c157d22c4345108cd86f710f57fd86621e9745f4))
+
 # [1.4.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.3.9...v1.4.0) (2025-01-06)
 
 
