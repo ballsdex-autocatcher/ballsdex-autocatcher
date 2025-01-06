@@ -5,6 +5,11 @@ on:
     branches:
       - master
       - dev
+  workflow_run:
+    workflows:
+      - "Update balls"
+    types:
+      - completed
 
 permissions:
   contents: write
