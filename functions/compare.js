@@ -68,7 +68,7 @@ function calculateMSE(buffer1, buffer2) {
  * @param {Number} maxMSE Threshold for acceptable match
  * @returns {String|Boolean} Best matching image filename or false if no match
  */
-async function compareWithFolderImages(url, maxMSE = 100) {
+async function compareWithFolderImages(url, maxMSE = 1000) {
     try {
         const fetchedImage = await fetchAndProcessImage(url);
         const preprocessedImages = [
