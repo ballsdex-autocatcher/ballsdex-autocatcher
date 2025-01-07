@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.5.2...v1.5.3) (2025-01-07)
+
+
+### Bug Fixes
+
+* **index:** Removed Some Logging To Reduce Bloat Substantially ([c56e5b9](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/c56e5b91c9732145615b63a89eac5f9f0a32956c))
+
 ## [1.5.2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.5.1...v1.5.2) (2025-01-07)
 
 

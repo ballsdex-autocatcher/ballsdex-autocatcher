@@ -1,6 +1,6 @@
 {
   "name": "ballsdex-autocatcher-v3",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
