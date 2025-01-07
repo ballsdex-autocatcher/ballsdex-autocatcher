@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.4.1...v1.5.0) (2025-01-07)
+
+
+### Features
+
+* **config:** add forceReturnBestMatch option to config.js.example ([852ffab](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/852ffab62f7bfad14d1999f7d2cf71ff973d40f1))
+
 ## [1.4.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.4.0...v1.4.1) (2025-01-06)
 
 
