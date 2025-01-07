@@ -89,8 +89,16 @@ async function compareWithFolderImages(url, maxMSE = 1000) {
                 bestMatch = preprocessed.filename;
             }
         }
-        if (config.forceReturnBestMatch) return bestMatch;
-        else return bestMSE > maxMSE ? false : bestMatch;
+        if (bestMSE > maxMSE) {
+            logger.info(`Tried to ignore ball with mse: ${bestMSE}`);
+            if (config.forceReturnBestMatch) {
+                return bestMatch;
+            } else {
+                return false;
+        }
+} else {
+    return bestMatch;
+}
     } catch (error) {
         logger.error('Error during comparison:', error);
         throw error;
