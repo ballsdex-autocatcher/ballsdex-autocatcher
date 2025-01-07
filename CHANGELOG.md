@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.5.1...v1.5.2) (2025-01-07)
+
+
+### Bug Fixes
+
+* **balls:** Updated the balls with the new version ([c82bb2a](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/c82bb2a6c7e9bf24399eae40cd809cdf2eeb73b8))
+
 ## [1.5.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.5.0...v1.5.1) (2025-01-07)
 
 
