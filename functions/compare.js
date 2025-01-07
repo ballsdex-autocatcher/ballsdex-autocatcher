@@ -90,7 +90,7 @@ async function compareWithFolderImages(url, maxMSE = 1000) {
             }
         }
         if (bestMSE > maxMSE) {
-            logger.info(`Tried to ignore ball with mse: ${bestMSE}`);
+            logger.info(`Tried to ignore ball with mse: ${bestMSE}, ${bestMatch}`);
             if (config.forceReturnBestMatch) {
                 return bestMatch;
             } else {
