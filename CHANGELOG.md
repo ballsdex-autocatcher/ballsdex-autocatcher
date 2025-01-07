@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.5.0...v1.5.1) (2025-01-07)
+
+
+### Bug Fixes
+
+* **compare:** Using a better compression method ([7be142a](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/commit/7be142a8b78109ae1daea8c0480535c84d093f4d))
+
 # [1.5.0](https://github.com/ballsdex-autocatcher/ballsdex-autocatcher/compare/v1.4.1...v1.5.0) (2025-01-07)
 
 
