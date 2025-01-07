@@ -1,12 +1,13 @@
-const { Worker, isMainThread, parentPort } = require('worker_threads');
-const sharp = require(process.argv.includes('--old') || process.argv.includes('--legacy') || process.argv.includes('-l') || process.argv.includes('-o') 
+const sharp = require(
+    process.argv.includes('--old') || process.argv.includes('--legacy') || process.argv.includes('-l') || process.argv.includes('-o') 
     ? 'sharp-legacy' 
-    : 'sharp');
+    : 'sharp'
+);
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const logger = require('./logger.js');
-
+const config = require('../config.js')
 /**
  * Fetches and processes the image for comparison.
  * @param {String} url
@@ -83,18 +84,13 @@ async function compareWithFolderImages(url, maxMSE = 1000) {
         for (const preprocessed of preprocessedImages) {
             const mse = calculateMSE(fetchedImage, preprocessed.buffer);
 
-            if (mse < maxMSE) {
-                return preprocessed.filename;
-            }
-
             if (mse < bestMSE) {
                 bestMSE = mse;
                 bestMatch = preprocessed.filename;
             }
         }
-
-        return bestMSE > maxMSE ? false : bestMatch;
-
+        if (config.forceReturnBestMatch) return bestMatch;
+        else return bestMSE > maxMSE ? false : bestMatch;
     } catch (error) {
         logger.error('Error during comparison:', error);
         throw error;

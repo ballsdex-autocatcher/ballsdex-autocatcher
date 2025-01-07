@@ -86,8 +86,9 @@ module.exports = {
     whitelistedBalls: [
     ],
 
-
     // Dashboard: We have a website with a dashboard that u can create an account on and see all of the balls caught by your autocatcher
     // The stored information is not available to the public and won't be shared with anyone
     dashboardToken: '', // Obtainable from autocatcher.xyz - leave empty if u don't need it
+
+    forceReturnBestMatch: false, // dont change this unless u know what u r doing
 }
