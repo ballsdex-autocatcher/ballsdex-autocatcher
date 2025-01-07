@@ -68,20 +68,14 @@ client.on("messageCreate", async (message) => {
                     await btn.reply();
                     logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
                 } catch {
-                    logger.error(`Failed to catch ${edited}`);
                     setTimeout(async () => {
-                        logger.info(`Retrying to catch ${edited}`);
                         try {
                             const btn = await message.clickButton();
                             await btn.components[0].components[0].setValue(edited);
                             await btn.reply();
                             logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds`);
                         } catch (error) {
-                            if (error.message === 'BUTTON_NOT_FOUND') {
-                            logger.success(`Caught ${edited} in ${Math.round((Date.now() - time) / 100) / 10} seconds on retry`);
-                            } else {
-                                logger.error(`Retry also failed for ${edited}: ${error.message}`);
-                            }
+                            // pass
                         }
                     }, 3000);
                 }
